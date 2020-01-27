@@ -162,6 +162,7 @@
             this.comboBox_Char1_Part4.Size = new System.Drawing.Size(99, 32);
             this.comboBox_Char1_Part4.TabIndex = 32;
             this.comboBox_Char1_Part4.ValueMember = "Frequency";
+            this.comboBox_Char1_Part4.SelectedIndexChanged += new System.EventHandler(this.comboBox_Char1_Part4_SelectedIndexChanged);
             // 
             // comboBox_Char1_Part3
             // 
@@ -174,6 +175,7 @@
             this.comboBox_Char1_Part3.Size = new System.Drawing.Size(99, 32);
             this.comboBox_Char1_Part3.TabIndex = 31;
             this.comboBox_Char1_Part3.ValueMember = "Frequency";
+            this.comboBox_Char1_Part3.SelectedIndexChanged += new System.EventHandler(this.comboBox_Char1_Part3_SelectedIndexChanged);
             // 
             // comboBox_Char1_Part2
             // 
@@ -186,6 +188,7 @@
             this.comboBox_Char1_Part2.Size = new System.Drawing.Size(99, 32);
             this.comboBox_Char1_Part2.TabIndex = 30;
             this.comboBox_Char1_Part2.ValueMember = "Frequency";
+            this.comboBox_Char1_Part2.SelectedIndexChanged += new System.EventHandler(this.comboBox_Char1_Part2_SelectedIndexChanged);
             // 
             // comboBox_Char1_Part1
             // 
@@ -198,6 +201,7 @@
             this.comboBox_Char1_Part1.Size = new System.Drawing.Size(99, 32);
             this.comboBox_Char1_Part1.TabIndex = 29;
             this.comboBox_Char1_Part1.ValueMember = "Frequency";
+            this.comboBox_Char1_Part1.SelectedIndexChanged += new System.EventHandler(this.comboBox_Char1_Part1_SelectedIndexChanged);
             // 
             // comboBox_Char1
             // 

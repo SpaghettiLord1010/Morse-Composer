@@ -116,11 +116,36 @@ namespace MorseComposer
 
         private void MorseEntry_Load(object sender, EventArgs e)
         {
-            comboBox_Char1_Part1.DataSource = Frequencies;
-            comboBox_Char1_Part2.DataSource = Frequencies;
-            comboBox_Char1_Part3.DataSource = Frequencies;
-            comboBox_Char1_Part4.DataSource = Frequencies;
+            comboBox_Char1_Part1.DataSource = Frequencies.Keys.ToList();
+            comboBox_Char1_Part2.DataSource = Frequencies.Keys.ToList();
+            comboBox_Char1_Part3.DataSource = Frequencies.Keys.ToList();
+            comboBox_Char1_Part4.DataSource = Frequencies.Keys.ToList();
             
+        }
+
+        private void comboBox_Char1_Part1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string key = comboBox_Char1_Part1.SelectedItem.ToString();
+            comboBox_Char1_Part1.ValueMember = Frequencies[key].ToString();
+        }
+
+        private void comboBox_Char1_Part2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string key = comboBox_Char1_Part2.SelectedItem.ToString();
+            comboBox_Char1_Part1.ValueMember = Frequencies[key].ToString();
+        }
+
+        private void comboBox_Char1_Part3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string key = comboBox_Char1_Part3.SelectedItem.ToString();
+            comboBox_Char1_Part1.ValueMember = Frequencies[key].ToString();
+
+        }
+
+        private void comboBox_Char1_Part4_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string key = comboBox_Char1_Part4.SelectedItem.ToString();
+            comboBox_Char1_Part1.ValueMember = Frequencies[key].ToString();
         }
     }
 }
