@@ -36,7 +36,6 @@
             this.lbl_Part4 = new System.Windows.Forms.Label();
             this.lbl_delay = new System.Windows.Forms.Label();
             this.comboBox_Char1 = new System.Windows.Forms.ComboBox();
-            this.comboBox_Char2 = new System.Windows.Forms.ComboBox();
             this.comboBox_Char1_Part1 = new System.Windows.Forms.ComboBox();
             this.frequenciesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.frequencySheet1DataSet = new MorseComposer.FrequencySheet1DataSet();
@@ -56,6 +55,9 @@
             this.numUpDown_DelayChar1Part1 = new System.Windows.Forms.NumericUpDown();
             this.numUpDown_DelayChar1Part2 = new System.Windows.Forms.NumericUpDown();
             this.numUpDown_DelayChar1Part3 = new System.Windows.Forms.NumericUpDown();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.butt_addChar = new System.Windows.Forms.Button();
+            this.butt_remChar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.frequenciesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.frequencySheet1DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numUpDown_DelayToChar2)).BeginInit();
@@ -155,47 +157,11 @@
             "Y",
             "Z"});
             this.comboBox_Char1.Location = new System.Drawing.Point(20, 72);
-            this.comboBox_Char1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.comboBox_Char1.Margin = new System.Windows.Forms.Padding(6);
             this.comboBox_Char1.Name = "comboBox_Char1";
             this.comboBox_Char1.Size = new System.Drawing.Size(105, 32);
             this.comboBox_Char1.TabIndex = 7;
             this.comboBox_Char1.SelectedIndexChanged += new System.EventHandler(this.comboBox_Char1_SelectedIndexChanged);
-            // 
-            // comboBox_Char2
-            // 
-            this.comboBox_Char2.FormattingEnabled = true;
-            this.comboBox_Char2.Items.AddRange(new object[] {
-            "A",
-            "B",
-            "C",
-            "D",
-            "E",
-            "F",
-            "G",
-            "H",
-            "I",
-            "J",
-            "K",
-            "L",
-            "M",
-            "N",
-            "O",
-            "P",
-            "Q",
-            "R",
-            "S",
-            "T",
-            "U",
-            "V",
-            "W",
-            "X",
-            "Y",
-            "Z"});
-            this.comboBox_Char2.Location = new System.Drawing.Point(20, 183);
-            this.comboBox_Char2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.comboBox_Char2.Name = "comboBox_Char2";
-            this.comboBox_Char2.Size = new System.Drawing.Size(105, 32);
-            this.comboBox_Char2.TabIndex = 8;
             // 
             // comboBox_Char1_Part1
             // 
@@ -203,7 +169,7 @@
             this.comboBox_Char1_Part1.DisplayMember = "NoteName";
             this.comboBox_Char1_Part1.FormattingEnabled = true;
             this.comboBox_Char1_Part1.Location = new System.Drawing.Point(156, 72);
-            this.comboBox_Char1_Part1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.comboBox_Char1_Part1.Margin = new System.Windows.Forms.Padding(6);
             this.comboBox_Char1_Part1.Name = "comboBox_Char1_Part1";
             this.comboBox_Char1_Part1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.comboBox_Char1_Part1.Size = new System.Drawing.Size(99, 32);
@@ -230,7 +196,7 @@
             this.comboBox_Char1_Part2.DisplayMember = "NoteName";
             this.comboBox_Char1_Part2.FormattingEnabled = true;
             this.comboBox_Char1_Part2.Location = new System.Drawing.Point(422, 72);
-            this.comboBox_Char1_Part2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.comboBox_Char1_Part2.Margin = new System.Windows.Forms.Padding(6);
             this.comboBox_Char1_Part2.Name = "comboBox_Char1_Part2";
             this.comboBox_Char1_Part2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.comboBox_Char1_Part2.Size = new System.Drawing.Size(99, 32);
@@ -243,7 +209,7 @@
             this.comboBox_Char1_Part3.DisplayMember = "NoteName";
             this.comboBox_Char1_Part3.FormattingEnabled = true;
             this.comboBox_Char1_Part3.Location = new System.Drawing.Point(664, 72);
-            this.comboBox_Char1_Part3.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.comboBox_Char1_Part3.Margin = new System.Windows.Forms.Padding(6);
             this.comboBox_Char1_Part3.Name = "comboBox_Char1_Part3";
             this.comboBox_Char1_Part3.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.comboBox_Char1_Part3.Size = new System.Drawing.Size(99, 32);
@@ -256,7 +222,7 @@
             this.comboBox_Char1_Part4.DisplayMember = "NoteName";
             this.comboBox_Char1_Part4.FormattingEnabled = true;
             this.comboBox_Char1_Part4.Location = new System.Drawing.Point(908, 72);
-            this.comboBox_Char1_Part4.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.comboBox_Char1_Part4.Margin = new System.Windows.Forms.Padding(6);
             this.comboBox_Char1_Part4.Name = "comboBox_Char1_Part4";
             this.comboBox_Char1_Part4.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.comboBox_Char1_Part4.Size = new System.Drawing.Size(99, 32);
@@ -266,7 +232,7 @@
             // numUpDown_DelayToChar2
             // 
             this.numUpDown_DelayToChar2.Location = new System.Drawing.Point(1021, 74);
-            this.numUpDown_DelayToChar2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.numUpDown_DelayToChar2.Margin = new System.Windows.Forms.Padding(6);
             this.numUpDown_DelayToChar2.Maximum = new decimal(new int[] {
             1215752192,
             23,
@@ -325,9 +291,9 @@
             // button_play
             // 
             this.button_play.Location = new System.Drawing.Point(20, 951);
-            this.button_play.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.button_play.Margin = new System.Windows.Forms.Padding(6);
             this.button_play.Name = "button_play";
-            this.button_play.Size = new System.Drawing.Size(138, 42);
+            this.button_play.Size = new System.Drawing.Size(166, 52);
             this.button_play.TabIndex = 20;
             this.button_play.Text = "PLAY";
             this.button_play.UseVisualStyleBackColor = true;
@@ -366,7 +332,7 @@
             // numUpDown_DelayChar1Part1
             // 
             this.numUpDown_DelayChar1Part1.Location = new System.Drawing.Point(270, 70);
-            this.numUpDown_DelayChar1Part1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.numUpDown_DelayChar1Part1.Margin = new System.Windows.Forms.Padding(6);
             this.numUpDown_DelayChar1Part1.Maximum = new decimal(new int[] {
             100000000,
             0,
@@ -381,7 +347,7 @@
             // numUpDown_DelayChar1Part2
             // 
             this.numUpDown_DelayChar1Part2.Location = new System.Drawing.Point(535, 70);
-            this.numUpDown_DelayChar1Part2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.numUpDown_DelayChar1Part2.Margin = new System.Windows.Forms.Padding(6);
             this.numUpDown_DelayChar1Part2.Maximum = new decimal(new int[] {
             100000000,
             0,
@@ -396,7 +362,7 @@
             // numUpDown_DelayChar1Part3
             // 
             this.numUpDown_DelayChar1Part3.Location = new System.Drawing.Point(777, 74);
-            this.numUpDown_DelayChar1Part3.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.numUpDown_DelayChar1Part3.Margin = new System.Windows.Forms.Padding(6);
             this.numUpDown_DelayChar1Part3.Maximum = new decimal(new int[] {
             100000000,
             0,
@@ -408,11 +374,41 @@
             this.numUpDown_DelayChar1Part3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.numUpDown_DelayChar1Part3.ThousandsSeparator = true;
             // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 188);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1341, 703);
+            this.flowLayoutPanel1.TabIndex = 28;
+            // 
+            // butt_addChar
+            // 
+            this.butt_addChar.Location = new System.Drawing.Point(1144, 951);
+            this.butt_addChar.Name = "butt_addChar";
+            this.butt_addChar.Size = new System.Drawing.Size(185, 52);
+            this.butt_addChar.TabIndex = 29;
+            this.butt_addChar.Text = "ADD CHAR";
+            this.butt_addChar.UseVisualStyleBackColor = true;
+            this.butt_addChar.Click += new System.EventHandler(this.butt_addChar_Click);
+            // 
+            // butt_remChar
+            // 
+            this.butt_remChar.Location = new System.Drawing.Point(935, 951);
+            this.butt_remChar.Name = "butt_remChar";
+            this.butt_remChar.Size = new System.Drawing.Size(185, 52);
+            this.butt_remChar.TabIndex = 30;
+            this.butt_remChar.Text = "REMOVE CHAR";
+            this.butt_remChar.UseVisualStyleBackColor = true;
+            this.butt_remChar.Click += new System.EventHandler(this.butt_remChar_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1342, 1015);
+            this.Controls.Add(this.butt_remChar);
+            this.Controls.Add(this.butt_addChar);
+            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.numUpDown_DelayChar1Part3);
             this.Controls.Add(this.numUpDown_DelayChar1Part2);
             this.Controls.Add(this.numUpDown_DelayChar1Part1);
@@ -429,7 +425,6 @@
             this.Controls.Add(this.comboBox_Char1_Part3);
             this.Controls.Add(this.comboBox_Char1_Part2);
             this.Controls.Add(this.comboBox_Char1_Part1);
-            this.Controls.Add(this.comboBox_Char2);
             this.Controls.Add(this.comboBox_Char1);
             this.Controls.Add(this.lbl_delay);
             this.Controls.Add(this.lbl_Part4);
@@ -437,7 +432,7 @@
             this.Controls.Add(this.lbl_Part2);
             this.Controls.Add(this.lbl_Part1);
             this.Controls.Add(this.lbl_Char);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Morse-Composer";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -461,7 +456,6 @@
         private System.Windows.Forms.Label lbl_Part4;
         private System.Windows.Forms.Label lbl_delay;
         private System.Windows.Forms.ComboBox comboBox_Char1;
-        private System.Windows.Forms.ComboBox comboBox_Char2;
         private System.Windows.Forms.ComboBox comboBox_Char1_Part1;
         private FrequencySheet1DataSet frequencySheet1DataSet;
         private System.Windows.Forms.BindingSource frequenciesBindingSource;
@@ -481,6 +475,9 @@
         private System.Windows.Forms.NumericUpDown numUpDown_DelayChar1Part1;
         private System.Windows.Forms.NumericUpDown numUpDown_DelayChar1Part2;
         private System.Windows.Forms.NumericUpDown numUpDown_DelayChar1Part3;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Button butt_addChar;
+        private System.Windows.Forms.Button butt_remChar;
     }
 }
 

@@ -134,7 +134,6 @@ namespace MorseComposer
         private void comboBox_Char1_SelectedIndexChanged(object sender, EventArgs e)
         {
             CheckComboBox1();
-            CheckComboBox2();
             DisplayPartTextChar1();
         }
         public void CheckComboBox1()
@@ -244,113 +243,6 @@ namespace MorseComposer
                 MorseCodeChar1 = "--..";
             }
         }
-        public void CheckComboBox2()
-        {
-            if (comboBox_Char2.Text.ToString() == "A")
-            {
-                MorseCodeChar1 = ".-";
-            }
-            else if (comboBox_Char2.Text.ToString() == "B")
-            {
-                MorseCodeChar1 = "-...";
-            }
-            else if (comboBox_Char2.Text.ToString() == "C")
-            {
-                MorseCodeChar1 = "-.-.";
-            }
-            else if (comboBox_Char2.Text.ToString() == "D")
-            {
-                MorseCodeChar1 = "-..";
-            }
-            else if (comboBox_Char2.Text.ToString() == "E")
-            {
-                MorseCodeChar1 = ".";
-            }
-            else if (comboBox_Char2.Text.ToString() == "F")
-            {
-                MorseCodeChar1 = "..-.";
-            }
-            else if (comboBox_Char2.Text.ToString() == "G")
-            {
-                MorseCodeChar1 = "--.";
-            }
-            else if (comboBox_Char2.Text.ToString() == "H")
-            {
-                MorseCodeChar1 = "....";
-            }
-            else if (comboBox_Char2.Text.ToString() == "I")
-            {
-                MorseCodeChar1 = "..";
-            }
-            else if (comboBox_Char2.Text.ToString() == "J")
-            {
-                MorseCodeChar1 = ".---";
-            }
-            else if (comboBox_Char2.Text.ToString() == "K")
-            {
-                MorseCodeChar1 = "-.-";
-            }
-            else if (comboBox_Char2.Text.ToString() == "L")
-            {
-                MorseCodeChar1 = ".-..";
-            }
-            else if (comboBox_Char2.Text.ToString() == "M")
-            {
-                MorseCodeChar1 = "--";
-            }
-            else if (comboBox_Char2.Text.ToString() == "N")
-            {
-                MorseCodeChar1 = "-.";
-            }
-            else if (comboBox_Char2.Text.ToString() == "O")
-            {
-                MorseCodeChar1 = "---";
-            }
-            else if (comboBox_Char2.Text.ToString() == "P")
-            {
-                MorseCodeChar1 = ".--.";
-            }
-            else if (comboBox_Char2.Text.ToString() == "Q")
-            {
-                MorseCodeChar1 = "--.-";
-            }
-            else if (comboBox_Char2.Text.ToString() == "R")
-            {
-                MorseCodeChar1 = ".-.";
-            }
-            else if (comboBox_Char2.Text.ToString() == "S")
-            {
-                MorseCodeChar1 = "...";
-            }
-            else if (comboBox_Char2.Text.ToString() == "T")
-            {
-                MorseCodeChar1 = "-";
-            }
-            else if (comboBox_Char2.Text.ToString() == "U")
-            {
-                MorseCodeChar1 = "..-";
-            }
-            else if (comboBox_Char2.Text.ToString() == "V")
-            {
-                MorseCodeChar1 = "...-";
-            }
-            else if (comboBox_Char2.Text.ToString() == "W")
-            {
-                MorseCodeChar1 = ".--";
-            }
-            else if (comboBox_Char2.Text.ToString() == "X")
-            {
-                MorseCodeChar1 = "-..-";
-            }
-            else if (comboBox_Char2.Text.ToString() == "Y")
-            {
-                MorseCodeChar1 = "-.--";
-            }
-            else if (comboBox_Char2.Text.ToString() == "Z")
-            {
-                MorseCodeChar1 = "--..";
-            }
-        }
         public void DisplayPartTextChar1()
         {
             for (int i = 0;  MorseCodeChar1.Length > i; i++)
@@ -417,6 +309,21 @@ namespace MorseComposer
                 System.Threading.Thread.Sleep((int)numUpDown_DelayToChar2.Value);
             }
 
+        }
+
+        private void butt_addChar_Click(object sender, EventArgs e)
+        {
+            MorseEntry myEntryGroup = new MorseEntry();
+            flowLayoutPanel1.Controls.Add(myEntryGroup);
+        }
+
+        private void butt_remChar_Click(object sender, EventArgs e)
+        {
+            if (flowLayoutPanel1.Controls.Count - 1 > -1)
+            {
+                int lastEntry = flowLayoutPanel1.Controls.Count - 1;
+                flowLayoutPanel1.Controls.RemoveAt(lastEntry);
+            }
         }
     }
 }
