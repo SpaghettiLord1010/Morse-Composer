@@ -10,16 +10,16 @@ using System.Windows.Forms;
 using System.Collections.Generic;
 
 
-namespace MorseComposer
+namespace MorseComposer.Presentation
 {
-    
-
-    public partial class Form1 : Form
+    public partial class MainWindow : Form
     {
         Label[] Char1PartArray = new Label[5];
         string MorseCodeChar1 = "";
         Dictionary<string, int> Frequencies = new Dictionary<string, int>();
-        public Form1()
+
+
+        public MainWindow()
         {
             InitializeComponent();
             Char1PartArray[0] = this.lbl_Char1Part1;
@@ -123,6 +123,7 @@ namespace MorseComposer
             Frequencies.Add("A8#", 7459);
             Frequencies.Add("B8", 7902);
         }
+
 
         private void Form1_Load(object sender, EventArgs e)
         {

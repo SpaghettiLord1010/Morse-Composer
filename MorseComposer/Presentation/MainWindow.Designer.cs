@@ -1,6 +1,6 @@
-﻿namespace MorseComposer
+﻿namespace MorseComposer.Presentation
 {
-    partial class Form1
+    partial class MainWindow
     {
         /// <summary>
         /// Erforderliche Designervariable.

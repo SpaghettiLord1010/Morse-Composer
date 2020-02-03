@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace MorseComposer
+namespace MorseComposer.Presentation
 {
     public partial class MorseEntry : UserControl
     {

@@ -1,4 +1,4 @@
-﻿namespace MorseComposer
+﻿namespace MorseComposer.Presentation
 {
     partial class MorseEntry
     {
