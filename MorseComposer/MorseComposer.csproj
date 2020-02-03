@@ -111,6 +111,11 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\MorseComposer.Data\MorseComposer.Data.csproj">
+      <Project>{D346BD10-0AA7-440F-B1F4-E29D57FA1DCF}</Project>
+      <Name>MorseComposer.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
