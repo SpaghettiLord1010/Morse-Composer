@@ -41,6 +41,7 @@
             this.comboBox_Char1_Part2 = new System.Windows.Forms.ComboBox();
             this.comboBox_Char1_Part1 = new System.Windows.Forms.ComboBox();
             this.comboBox_Char1 = new System.Windows.Forms.ComboBox();
+            this.lbl_identifiyer = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numUpDown_DelayChar1Part3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numUpDown_DelayChar1Part2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numUpDown_DelayChar1Part1)).BeginInit();
@@ -239,10 +240,20 @@
             this.comboBox_Char1.Size = new System.Drawing.Size(105, 32);
             this.comboBox_Char1.TabIndex = 28;
             // 
+            // lbl_identifiyer
+            // 
+            this.lbl_identifiyer.AutoSize = true;
+            this.lbl_identifiyer.Location = new System.Drawing.Point(3, 90);
+            this.lbl_identifiyer.Name = "lbl_identifiyer";
+            this.lbl_identifiyer.Size = new System.Drawing.Size(64, 25);
+            this.lbl_identifiyer.TabIndex = 41;
+            this.lbl_identifiyer.Text = "label1";
+            // 
             // MorseEntry
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.lbl_identifiyer);
             this.Controls.Add(this.numUpDown_DelayChar1Part3);
             this.Controls.Add(this.numUpDown_DelayChar1Part2);
             this.Controls.Add(this.numUpDown_DelayChar1Part1);
@@ -257,7 +268,7 @@
             this.Controls.Add(this.comboBox_Char1_Part1);
             this.Controls.Add(this.comboBox_Char1);
             this.Name = "MorseEntry";
-            this.Size = new System.Drawing.Size(1325, 106);
+            this.Size = new System.Drawing.Size(1325, 151);
             this.Load += new System.EventHandler(this.MorseEntry_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numUpDown_DelayChar1Part3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numUpDown_DelayChar1Part2)).EndInit();
@@ -283,5 +294,6 @@
         private System.Windows.Forms.ComboBox comboBox_Char1_Part2;
         private System.Windows.Forms.ComboBox comboBox_Char1_Part1;
         private System.Windows.Forms.ComboBox comboBox_Char1;
+        private System.Windows.Forms.Label lbl_identifiyer;
     }
 }

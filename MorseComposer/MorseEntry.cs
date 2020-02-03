@@ -14,6 +14,17 @@ namespace MorseComposer
     {
         Dictionary<string, int> Frequencies = new Dictionary<string, int>();
 
+        Guid guid;
+        public Guid Identifier
+        {
+            get { return guid; }
+            set
+            {
+                guid = value;
+                lbl_identifiyer.Text = value.ToString();
+            }
+        }
+
         public MorseEntry()
         {
             InitializeComponent();
@@ -111,7 +122,7 @@ namespace MorseComposer
             Frequencies.Add("A8", 7040);
             Frequencies.Add("A8#", 7459);
             Frequencies.Add("B8", 7902);
-
+            Identifier = Guid.NewGuid();
         }
 
         private void MorseEntry_Load(object sender, EventArgs e)
