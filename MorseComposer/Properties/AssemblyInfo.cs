@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // Allgemeine Informationen über eine Assembly werden über die folgenden
 // Attribute gesteuert. Ändern Sie diese Attributwerte, um die Informationen zu ändern,
 // die einer Assembly zugeordnet sind.
-[assembly: AssemblyTitle("MorseComposer")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("Morse Composer")]
+[assembly: AssemblyDescription("This application aims to make morse code a bit more pleasing for our ears by enabling you to change the pitch of each line or dot.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("MorseComposer")]
+[assembly: AssemblyCompany("https://github.com/SpaghettiLord1010/Morse-Composer")]
+[assembly: AssemblyProduct("Morse Composer")]
 [assembly: AssemblyCopyright("Copyright ©  2020")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

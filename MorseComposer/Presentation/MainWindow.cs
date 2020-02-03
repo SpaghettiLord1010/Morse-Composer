@@ -1,14 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Collections.Generic;
-
 
 namespace MorseComposer.Presentation
 {
@@ -46,6 +37,18 @@ namespace MorseComposer.Presentation
 
 			PopulateCharacters(entry.Char1);
 			DisplayPartTextChar1();
+		}
+
+
+		private void AboutMenuItem_OnClick(object sender, EventArgs e)
+		{
+			new MainAbout().ShowDialog();
+		}
+
+
+		private void DataWindowMenuItem_OnClick(object sender, EventArgs e)
+		{
+			new DataWindow().ShowDialog();
 		}
 
 
@@ -269,6 +272,10 @@ namespace MorseComposer.Presentation
 				throw new IndexOutOfRangeException("The flow layout has no entries.");
 			}
 		}
+
+
+
+
 
 
 	}
