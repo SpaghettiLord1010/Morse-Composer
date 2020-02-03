@@ -11,6 +11,7 @@ namespace MorseComposer.Presentation
 		private string MorseCodeChar1 = "";
 
 
+
 		public MainWindow()
 		{
 			InitializeComponent();
@@ -26,27 +27,36 @@ namespace MorseComposer.Presentation
 		}
 
 
-		private void Form1_Load(object sender, EventArgs e)
+		private void OnLoad(object sender, EventArgs e)
 		{
 			// TODO: Diese Codezeile lädt Daten in die Tabelle "frequencySheet1DataSet.Frequencies". Sie können sie bei Bedarf verschieben oder entfernen.
 			this.frequenciesTableAdapter.Fill(this.frequencySheet1DataSet.Frequencies);
 		}
 
 
+		private void SubmitButton_Click(object sender, EventArgs e)
+		{
+			MessageEntry_TextBox.Text.ToString();
+
+
+			var result = Program.Data.Translate(MessageEntry_TextBox.Text);
+			MessageTranslate_TextBox.Text = result;
+		}
+
+
 		private void comboBox_Char1_SelectedIndexChanged(object sender, EventArgs e)
 		{
 			//var entry = GetEntry(0);
-
 			//PopulateCharacters(entry.Char1);
 			DisplayPartTextChar1();
 		}
+
 
 
 		private void AboutMenuItem_OnClick(object sender, EventArgs e)
 		{
 			new MainAbout().ShowDialog();
 		}
-
 
 		private void DataWindowMenuItem_OnClick(object sender, EventArgs e)
 		{
@@ -274,10 +284,6 @@ namespace MorseComposer.Presentation
 				throw new IndexOutOfRangeException("The flow layout has no entries.");
 			}
 		}
-
-
-
-
 
 
 	}

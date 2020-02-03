@@ -38,17 +38,20 @@
 			this.butt_remChar = new System.Windows.Forms.Button();
 			this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
 			this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-			this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+			this.MainMenuStrip = new System.Windows.Forms.MenuStrip();
 			this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.AboutMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.showDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.AboutMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+			this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.MessageEntry_TextBox = new System.Windows.Forms.TextBox();
+			this.MessageTranslate_TextBox = new System.Windows.Forms.TextBox();
+			this.SubmitButton = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.frequenciesBindingSource)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.frequencySheet1DataSet)).BeginInit();
 			this.tableLayoutPanel1.SuspendLayout();
 			this.flowLayoutPanel2.SuspendLayout();
-			this.menuStrip1.SuspendLayout();
+			this.MainMenuStrip.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// frequenciesBindingSource
@@ -113,7 +116,7 @@
 			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
 			this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel1, 0, 0);
 			this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel2, 0, 1);
-			this.tableLayoutPanel1.Location = new System.Drawing.Point(102, 145);
+			this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 255);
 			this.tableLayoutPanel1.Name = "tableLayoutPanel1";
 			this.tableLayoutPanel1.RowCount = 2;
 			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -133,39 +136,26 @@
 			this.flowLayoutPanel2.Size = new System.Drawing.Size(307, 34);
 			this.flowLayoutPanel2.TabIndex = 29;
 			// 
-			// menuStrip1
+			// MainMenuStrip
 			// 
-			this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileToolStripMenuItem,
-            this.AboutMenuItem});
-			this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-			this.menuStrip1.Name = "menuStrip1";
-			this.menuStrip1.Size = new System.Drawing.Size(732, 24);
-			this.menuStrip1.TabIndex = 32;
-			this.menuStrip1.Text = "menuStrip1";
+			this.MainMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fileToolStripMenuItem});
+			this.MainMenuStrip.Location = new System.Drawing.Point(0, 0);
+			this.MainMenuStrip.Name = "MainMenuStrip";
+			this.MainMenuStrip.Size = new System.Drawing.Size(732, 24);
+			this.MainMenuStrip.TabIndex = 32;
+			this.MainMenuStrip.Text = "menuStrip1";
 			// 
 			// fileToolStripMenuItem
 			// 
 			this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.showDataToolStripMenuItem,
+            this.AboutMenuItem,
             this.toolStripSeparator1,
             this.exitToolStripMenuItem});
 			this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
 			this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
 			this.fileToolStripMenuItem.Text = "&File";
-			// 
-			// exitToolStripMenuItem
-			// 
-			this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-			this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-			this.exitToolStripMenuItem.Text = "E&xit";
-			// 
-			// AboutMenuItem
-			// 
-			this.AboutMenuItem.Name = "AboutMenuItem";
-			this.AboutMenuItem.Size = new System.Drawing.Size(61, 20);
-			this.AboutMenuItem.Text = "&About...";
-			this.AboutMenuItem.Click += new System.EventHandler(this.AboutMenuItem_OnClick);
 			// 
 			// showDataToolStripMenuItem
 			// 
@@ -174,30 +164,71 @@
 			this.showDataToolStripMenuItem.Text = "Show Data Window...";
 			this.showDataToolStripMenuItem.Click += new System.EventHandler(this.DataWindowMenuItem_OnClick);
 			// 
+			// AboutMenuItem
+			// 
+			this.AboutMenuItem.Name = "AboutMenuItem";
+			this.AboutMenuItem.Size = new System.Drawing.Size(186, 22);
+			this.AboutMenuItem.Text = "About...";
+			this.AboutMenuItem.Click += new System.EventHandler(this.AboutMenuItem_OnClick);
+			// 
 			// toolStripSeparator1
 			// 
 			this.toolStripSeparator1.Name = "toolStripSeparator1";
-			this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
+			this.toolStripSeparator1.Size = new System.Drawing.Size(183, 6);
+			// 
+			// exitToolStripMenuItem
+			// 
+			this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+			this.exitToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
+			this.exitToolStripMenuItem.Text = "E&xit";
+			// 
+			// MessageEntry_TextBox
+			// 
+			this.MessageEntry_TextBox.Location = new System.Drawing.Point(12, 27);
+			this.MessageEntry_TextBox.Name = "MessageEntry_TextBox";
+			this.MessageEntry_TextBox.Size = new System.Drawing.Size(402, 20);
+			this.MessageEntry_TextBox.TabIndex = 33;
+			this.MessageEntry_TextBox.Text = "Hello World";
+			// 
+			// MessageTranslate_TextBox
+			// 
+			this.MessageTranslate_TextBox.Location = new System.Drawing.Point(12, 53);
+			this.MessageTranslate_TextBox.Name = "MessageTranslate_TextBox";
+			this.MessageTranslate_TextBox.ReadOnly = true;
+			this.MessageTranslate_TextBox.Size = new System.Drawing.Size(402, 20);
+			this.MessageTranslate_TextBox.TabIndex = 34;
+			// 
+			// SubmitButton
+			// 
+			this.SubmitButton.Location = new System.Drawing.Point(436, 27);
+			this.SubmitButton.Name = "SubmitButton";
+			this.SubmitButton.Size = new System.Drawing.Size(75, 23);
+			this.SubmitButton.TabIndex = 35;
+			this.SubmitButton.Text = "Submit";
+			this.SubmitButton.UseVisualStyleBackColor = true;
+			this.SubmitButton.Click += new System.EventHandler(this.SubmitButton_Click);
 			// 
 			// MainWindow
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(732, 550);
+			this.Controls.Add(this.SubmitButton);
+			this.Controls.Add(this.MessageTranslate_TextBox);
+			this.Controls.Add(this.MessageEntry_TextBox);
 			this.Controls.Add(this.tableLayoutPanel1);
-			this.Controls.Add(this.menuStrip1);
-			this.MainMenuStrip = this.menuStrip1;
+			this.Controls.Add(this.MainMenuStrip);
 			this.Margin = new System.Windows.Forms.Padding(2);
 			this.Name = "MainWindow";
 			this.Text = "Morse Composer";
-			this.Load += new System.EventHandler(this.Form1_Load);
+			this.Load += new System.EventHandler(this.OnLoad);
 			((System.ComponentModel.ISupportInitialize)(this.frequenciesBindingSource)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.frequencySheet1DataSet)).EndInit();
 			this.tableLayoutPanel1.ResumeLayout(false);
 			this.tableLayoutPanel1.PerformLayout();
 			this.flowLayoutPanel2.ResumeLayout(false);
-			this.menuStrip1.ResumeLayout(false);
-			this.menuStrip1.PerformLayout();
+			this.MainMenuStrip.ResumeLayout(false);
+			this.MainMenuStrip.PerformLayout();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -213,12 +244,15 @@
         private System.Windows.Forms.Button butt_remChar;
 		private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
 		private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
-		private System.Windows.Forms.MenuStrip menuStrip1;
+		private System.Windows.Forms.MenuStrip MainMenuStrip;
 		private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
-		private System.Windows.Forms.ToolStripMenuItem AboutMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem showDataToolStripMenuItem;
 		private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+		private System.Windows.Forms.ToolStripMenuItem AboutMenuItem;
+		private System.Windows.Forms.TextBox MessageEntry_TextBox;
+		private System.Windows.Forms.TextBox MessageTranslate_TextBox;
+		private System.Windows.Forms.Button SubmitButton;
 	}
 }
 

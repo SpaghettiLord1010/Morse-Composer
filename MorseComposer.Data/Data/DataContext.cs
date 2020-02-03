@@ -1,42 +1,92 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace MorseComposer.Data
 {
     public class DataContext
 	{
-        public Dictionary<string, string> Letters { get; private set; }
+        public string Message { get; private set; }
+        public string MessageResult { get; private set; }
+
+        public Dictionary<char, string> Letters { get; private set; }
         public Dictionary<string, int> Frequencies { get; private set; }
+
+
+        public const string LetterSpace = "   ";
+        public const string WordSpace = "       ";
+
+
+        public string Translate(string message)
+        {
+            if (string.IsNullOrWhiteSpace(message))
+            {
+                return string.Empty;
+            }
+            else
+            {
+                message = message.ToUpper();
+
+                string result = string.Empty;
+
+                foreach (char character in message)
+                {
+
+                    if (character == ' ')
+                    {
+                        result += WordSpace;
+                    }
+                    else
+                    {
+                        bool found = Letters.TryGetValue(character, out string letter);
+
+                        if (found)
+                        {
+                            result += LetterSpace;
+                            result += letter;
+                        }
+                        else
+                        {
+                            throw new Exception("The letter character \"" + character + "\" could not be found.");
+                        }
+                    }
+                }
+
+                return result;
+            }
+        }
+
 
 
         public DataContext()
 		{
-            Letters = new Dictionary<string, string>();
-            Letters.Add("A", ".-");
-            Letters.Add("B", "-...");
-            Letters.Add("C", "-.-.");
-            Letters.Add("D", "-..");
-            Letters.Add("E", ".");
-            Letters.Add("F", "..-.");
-            Letters.Add("G", "--.");
-            Letters.Add("H", "....");
-            Letters.Add("I", "..");
-            Letters.Add("J", ".---");
-            Letters.Add("K", "-.-");
-            Letters.Add("L", ".-..");
-            Letters.Add("M", "--");
-            Letters.Add("N", "-.");
-            Letters.Add("O", "---");
-            Letters.Add("P", ".--.");
-            Letters.Add("Q", "--.-");
-            Letters.Add("R", ".-.");
-            Letters.Add("S", "...");
-            Letters.Add("T", "-");
-            Letters.Add("U", "..-");
-            Letters.Add("V", "...-");
-            Letters.Add("W", ".--");
-            Letters.Add("X", "-..-");
-            Letters.Add("Y", "-.--");
-            Letters.Add("Z", "--..");
+            Letters = new Dictionary<char, string>();
+            Letters.Add('A', ".-");
+            Letters.Add('B', "-...");
+            Letters.Add('C', "-.-.");
+            Letters.Add('D', "-..");
+            Letters.Add('E', ".");
+            Letters.Add('F', "..-.");
+            Letters.Add('G', "--.");
+            Letters.Add('H', "....");
+            Letters.Add('I', "..");
+            Letters.Add('J', ".---");
+            Letters.Add('K', "-.-");
+            Letters.Add('L', ".-..");
+            Letters.Add('M', "--");
+            Letters.Add('N', "-.");
+            Letters.Add('O', "---");
+            Letters.Add('P', ".--.");
+            Letters.Add('Q', "--.-");
+            Letters.Add('R', ".-.");
+            Letters.Add('S', "...");
+            Letters.Add('T', "-");
+            Letters.Add('U', "..-");
+            Letters.Add('V', "...-");
+            Letters.Add('W', ".--");
+            Letters.Add('X', "-..-");
+            Letters.Add('Y', "-.--");
+            Letters.Add('Z', "--..");
+            //Letters.Add(' ', SpaceWord);
 
 
             Frequencies = new Dictionary<string, int>();

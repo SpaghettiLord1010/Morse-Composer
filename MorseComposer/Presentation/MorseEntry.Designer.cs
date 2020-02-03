@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-			this.components = new System.ComponentModel.Container();
 			this.lbl_identifiyer = new System.Windows.Forms.Label();
 			this.numUpDown_DelayChar1Part3 = new System.Windows.Forms.NumericUpDown();
 			this.numUpDown_DelayChar1Part2 = new System.Windows.Forms.NumericUpDown();
@@ -46,7 +45,6 @@
 			this.comboBox_Char1_Part2 = new System.Windows.Forms.ComboBox();
 			this.comboBox_Char1_Part1 = new System.Windows.Forms.ComboBox();
 			this.comboBox_Char1 = new System.Windows.Forms.ComboBox();
-			this.dataContextBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.lbl_delay = new System.Windows.Forms.Label();
 			this.lbl_Part4 = new System.Windows.Forms.Label();
 			this.lbl_Part3 = new System.Windows.Forms.Label();
@@ -57,7 +55,6 @@
 			((System.ComponentModel.ISupportInitialize)(this.numUpDown_DelayChar1Part2)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.numUpDown_DelayChar1Part1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.numUpDown_DelayToChar2)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.dataContextBindingSource)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// lbl_identifiyer
@@ -245,10 +242,6 @@
 			this.comboBox_Char1.Size = new System.Drawing.Size(59, 21);
 			this.comboBox_Char1.TabIndex = 48;
 			// 
-			// dataContextBindingSource
-			// 
-			this.dataContextBindingSource.DataSource = typeof(MorseComposer.Data.DataContext);
-			// 
 			// lbl_delay
 			// 
 			this.lbl_delay.AutoSize = true;
@@ -338,7 +331,6 @@
 			((System.ComponentModel.ISupportInitialize)(this.numUpDown_DelayChar1Part2)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.numUpDown_DelayChar1Part1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.numUpDown_DelayToChar2)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.dataContextBindingSource)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -368,6 +360,5 @@
         private System.Windows.Forms.Label lbl_Part2;
         private System.Windows.Forms.Label lbl_Part1;
         private System.Windows.Forms.Label lbl_Char;
-		private System.Windows.Forms.BindingSource dataContextBindingSource;
 	}
 }
