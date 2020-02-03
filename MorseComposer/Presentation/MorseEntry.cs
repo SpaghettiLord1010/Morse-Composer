@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace MorseComposer.Presentation
@@ -168,12 +162,14 @@ namespace MorseComposer.Presentation
 
         private void MorseEntry_Load(object sender, EventArgs e)
         {
+            Char1.DataSource = Program.Data.Letters.Keys.ToList();
+
             comboBox_Char1_Part1.DataSource = Program.Data.Frequencies.Keys.ToList();
             comboBox_Char1_Part2.DataSource = Program.Data.Frequencies.Keys.ToList();
             comboBox_Char1_Part3.DataSource = Program.Data.Frequencies.Keys.ToList();
             comboBox_Char1_Part4.DataSource = Program.Data.Frequencies.Keys.ToList();
-
         }
+
 
         private void comboBox_Char1_Part1_SelectedIndexChanged(object sender, EventArgs e)
         {

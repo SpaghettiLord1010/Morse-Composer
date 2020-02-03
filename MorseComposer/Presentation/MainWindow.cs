@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace MorseComposer.Presentation
@@ -21,6 +22,7 @@ namespace MorseComposer.Presentation
 			Char1PartArray[1] = entry.Char1Part2;
 			Char1PartArray[2] = entry.Char1Part3;
 			Char1PartArray[3] = entry.Char1Part4;
+
 		}
 
 
@@ -33,9 +35,9 @@ namespace MorseComposer.Presentation
 
 		private void comboBox_Char1_SelectedIndexChanged(object sender, EventArgs e)
 		{
-			var entry = GetEntry(0);
+			//var entry = GetEntry(0);
 
-			PopulateCharacters(entry.Char1);
+			//PopulateCharacters(entry.Char1);
 			DisplayPartTextChar1();
 		}
 

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+			this.components = new System.ComponentModel.Container();
 			this.lbl_identifiyer = new System.Windows.Forms.Label();
 			this.numUpDown_DelayChar1Part3 = new System.Windows.Forms.NumericUpDown();
 			this.numUpDown_DelayChar1Part2 = new System.Windows.Forms.NumericUpDown();
@@ -45,6 +46,7 @@
 			this.comboBox_Char1_Part2 = new System.Windows.Forms.ComboBox();
 			this.comboBox_Char1_Part1 = new System.Windows.Forms.ComboBox();
 			this.comboBox_Char1 = new System.Windows.Forms.ComboBox();
+			this.dataContextBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.lbl_delay = new System.Windows.Forms.Label();
 			this.lbl_Part4 = new System.Windows.Forms.Label();
 			this.lbl_Part3 = new System.Windows.Forms.Label();
@@ -55,6 +57,7 @@
 			((System.ComponentModel.ISupportInitialize)(this.numUpDown_DelayChar1Part2)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.numUpDown_DelayChar1Part1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.numUpDown_DelayToChar2)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.dataContextBindingSource)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// lbl_identifiyer
@@ -237,37 +240,14 @@
 			// comboBox_Char1
 			// 
 			this.comboBox_Char1.FormattingEnabled = true;
-			this.comboBox_Char1.Items.AddRange(new object[] {
-            "A",
-            "B",
-            "C",
-            "D",
-            "E",
-            "F",
-            "G",
-            "H",
-            "I",
-            "J",
-            "K",
-            "L",
-            "M",
-            "N",
-            "O",
-            "P",
-            "Q",
-            "R",
-            "S",
-            "T",
-            "U",
-            "V",
-            "W",
-            "X",
-            "Y",
-            "Z"});
 			this.comboBox_Char1.Location = new System.Drawing.Point(13, 38);
 			this.comboBox_Char1.Name = "comboBox_Char1";
 			this.comboBox_Char1.Size = new System.Drawing.Size(59, 21);
 			this.comboBox_Char1.TabIndex = 48;
+			// 
+			// dataContextBindingSource
+			// 
+			this.dataContextBindingSource.DataSource = typeof(MorseComposer.Data.DataContext);
 			// 
 			// lbl_delay
 			// 
@@ -350,7 +330,7 @@
 			this.Controls.Add(this.lbl_Part1);
 			this.Controls.Add(this.lbl_Char);
 			this.Controls.Add(this.lbl_identifiyer);
-			this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+			this.Margin = new System.Windows.Forms.Padding(2);
 			this.Name = "MorseEntry";
 			this.Size = new System.Drawing.Size(745, 111);
 			this.Load += new System.EventHandler(this.MorseEntry_Load);
@@ -358,6 +338,7 @@
 			((System.ComponentModel.ISupportInitialize)(this.numUpDown_DelayChar1Part2)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.numUpDown_DelayChar1Part1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.numUpDown_DelayToChar2)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.dataContextBindingSource)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -387,5 +368,6 @@
         private System.Windows.Forms.Label lbl_Part2;
         private System.Windows.Forms.Label lbl_Part1;
         private System.Windows.Forms.Label lbl_Char;
-    }
+		private System.Windows.Forms.BindingSource dataContextBindingSource;
+	}
 }
