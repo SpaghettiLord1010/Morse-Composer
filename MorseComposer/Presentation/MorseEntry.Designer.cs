@@ -28,262 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-			this.lbl_identifiyer = new System.Windows.Forms.Label();
-			this.numUpDown_DelayChar1Part3 = new System.Windows.Forms.NumericUpDown();
-			this.numUpDown_DelayChar1Part2 = new System.Windows.Forms.NumericUpDown();
-			this.numUpDown_DelayChar1Part1 = new System.Windows.Forms.NumericUpDown();
-			this.lbl_Delay3 = new System.Windows.Forms.Label();
-			this.lbl_Delay2 = new System.Windows.Forms.Label();
-			this.lbl_Delay1 = new System.Windows.Forms.Label();
-			this.lbl_Char1Part4 = new System.Windows.Forms.Label();
-			this.lbl_Char1Part3 = new System.Windows.Forms.Label();
-			this.lbl_Char1Part2 = new System.Windows.Forms.Label();
-			this.lbl_Char1Part1 = new System.Windows.Forms.Label();
-			this.numUpDown_DelayToChar2 = new System.Windows.Forms.NumericUpDown();
-			this.comboBox_Char1_Part4 = new System.Windows.Forms.ComboBox();
-			this.comboBox_Char1_Part3 = new System.Windows.Forms.ComboBox();
-			this.comboBox_Char1_Part2 = new System.Windows.Forms.ComboBox();
-			this.comboBox_Char1_Part1 = new System.Windows.Forms.ComboBox();
-			this.lbl_delay = new System.Windows.Forms.Label();
-			this.lbl_Part4 = new System.Windows.Forms.Label();
-			this.lbl_Part3 = new System.Windows.Forms.Label();
-			this.lbl_Part2 = new System.Windows.Forms.Label();
-			this.lbl_Part1 = new System.Windows.Forms.Label();
+			this.Identifier_Label = new System.Windows.Forms.Label();
 			this.Character_Label = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
-			((System.ComponentModel.ISupportInitialize)(this.numUpDown_DelayChar1Part3)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.numUpDown_DelayChar1Part2)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.numUpDown_DelayChar1Part1)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.numUpDown_DelayToChar2)).BeginInit();
+			this.Morse_Label = new System.Windows.Forms.Label();
+			this.SymbolPanel = new System.Windows.Forms.FlowLayoutPanel();
+			this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+			this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+			this.tableLayoutPanel1.SuspendLayout();
+			this.tableLayoutPanel2.SuspendLayout();
 			this.SuspendLayout();
 			// 
-			// lbl_identifiyer
+			// Identifier_Label
 			// 
-			this.lbl_identifiyer.AutoSize = true;
-			this.lbl_identifiyer.Location = new System.Drawing.Point(55, 89);
-			this.lbl_identifiyer.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-			this.lbl_identifiyer.Name = "lbl_identifiyer";
-			this.lbl_identifiyer.Size = new System.Drawing.Size(18, 13);
-			this.lbl_identifiyer.TabIndex = 41;
-			this.lbl_identifiyer.Text = "ID";
-			// 
-			// numUpDown_DelayChar1Part3
-			// 
-			this.numUpDown_DelayChar1Part3.Location = new System.Drawing.Point(426, 39);
-			this.numUpDown_DelayChar1Part3.Maximum = new decimal(new int[] {
-            100000000,
-            0,
-            0,
-            0});
-			this.numUpDown_DelayChar1Part3.Name = "numUpDown_DelayChar1Part3";
-			this.numUpDown_DelayChar1Part3.Size = new System.Drawing.Size(64, 20);
-			this.numUpDown_DelayChar1Part3.TabIndex = 63;
-			this.numUpDown_DelayChar1Part3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-			this.numUpDown_DelayChar1Part3.ThousandsSeparator = true;
-			// 
-			// numUpDown_DelayChar1Part2
-			// 
-			this.numUpDown_DelayChar1Part2.Location = new System.Drawing.Point(294, 37);
-			this.numUpDown_DelayChar1Part2.Maximum = new decimal(new int[] {
-            100000000,
-            0,
-            0,
-            0});
-			this.numUpDown_DelayChar1Part2.Name = "numUpDown_DelayChar1Part2";
-			this.numUpDown_DelayChar1Part2.Size = new System.Drawing.Size(64, 20);
-			this.numUpDown_DelayChar1Part2.TabIndex = 62;
-			this.numUpDown_DelayChar1Part2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-			this.numUpDown_DelayChar1Part2.ThousandsSeparator = true;
-			// 
-			// numUpDown_DelayChar1Part1
-			// 
-			this.numUpDown_DelayChar1Part1.Location = new System.Drawing.Point(149, 37);
-			this.numUpDown_DelayChar1Part1.Maximum = new decimal(new int[] {
-            100000000,
-            0,
-            0,
-            0});
-			this.numUpDown_DelayChar1Part1.Name = "numUpDown_DelayChar1Part1";
-			this.numUpDown_DelayChar1Part1.Size = new System.Drawing.Size(77, 20);
-			this.numUpDown_DelayChar1Part1.TabIndex = 61;
-			this.numUpDown_DelayChar1Part1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-			this.numUpDown_DelayChar1Part1.ThousandsSeparator = true;
-			// 
-			// lbl_Delay3
-			// 
-			this.lbl_Delay3.AutoSize = true;
-			this.lbl_Delay3.Location = new System.Drawing.Point(426, 8);
-			this.lbl_Delay3.Name = "lbl_Delay3";
-			this.lbl_Delay3.Size = new System.Drawing.Size(64, 13);
-			this.lbl_Delay3.TabIndex = 60;
-			this.lbl_Delay3.Text = "Delay in MS";
-			// 
-			// lbl_Delay2
-			// 
-			this.lbl_Delay2.AutoSize = true;
-			this.lbl_Delay2.Location = new System.Drawing.Point(294, 8);
-			this.lbl_Delay2.Name = "lbl_Delay2";
-			this.lbl_Delay2.Size = new System.Drawing.Size(64, 13);
-			this.lbl_Delay2.TabIndex = 59;
-			this.lbl_Delay2.Text = "Delay in MS";
-			// 
-			// lbl_Delay1
-			// 
-			this.lbl_Delay1.AutoSize = true;
-			this.lbl_Delay1.Location = new System.Drawing.Point(158, 8);
-			this.lbl_Delay1.Name = "lbl_Delay1";
-			this.lbl_Delay1.Size = new System.Drawing.Size(64, 13);
-			this.lbl_Delay1.TabIndex = 58;
-			this.lbl_Delay1.Text = "Delay in MS";
-			// 
-			// lbl_Char1Part4
-			// 
-			this.lbl_Char1Part4.AutoSize = true;
-			this.lbl_Char1Part4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lbl_Char1Part4.Location = new System.Drawing.Point(509, 62);
-			this.lbl_Char1Part4.Name = "lbl_Char1Part4";
-			this.lbl_Char1Part4.Size = new System.Drawing.Size(44, 24);
-			this.lbl_Char1Part4.TabIndex = 57;
-			this.lbl_Char1Part4.Text = "null";
-			// 
-			// lbl_Char1Part3
-			// 
-			this.lbl_Char1Part3.AutoSize = true;
-			this.lbl_Char1Part3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lbl_Char1Part3.Location = new System.Drawing.Point(376, 62);
-			this.lbl_Char1Part3.Name = "lbl_Char1Part3";
-			this.lbl_Char1Part3.Size = new System.Drawing.Size(44, 24);
-			this.lbl_Char1Part3.TabIndex = 56;
-			this.lbl_Char1Part3.Text = "null";
-			// 
-			// lbl_Char1Part2
-			// 
-			this.lbl_Char1Part2.AutoSize = true;
-			this.lbl_Char1Part2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lbl_Char1Part2.Location = new System.Drawing.Point(241, 62);
-			this.lbl_Char1Part2.Name = "lbl_Char1Part2";
-			this.lbl_Char1Part2.Size = new System.Drawing.Size(44, 24);
-			this.lbl_Char1Part2.TabIndex = 55;
-			this.lbl_Char1Part2.Text = "null";
-			// 
-			// lbl_Char1Part1
-			// 
-			this.lbl_Char1Part1.AutoSize = true;
-			this.lbl_Char1Part1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lbl_Char1Part1.Location = new System.Drawing.Point(100, 62);
-			this.lbl_Char1Part1.Name = "lbl_Char1Part1";
-			this.lbl_Char1Part1.Size = new System.Drawing.Size(44, 24);
-			this.lbl_Char1Part1.TabIndex = 54;
-			this.lbl_Char1Part1.Text = "null";
-			// 
-			// numUpDown_DelayToChar2
-			// 
-			this.numUpDown_DelayToChar2.Location = new System.Drawing.Point(559, 39);
-			this.numUpDown_DelayToChar2.Maximum = new decimal(new int[] {
-            1215752192,
-            23,
-            0,
-            0});
-			this.numUpDown_DelayToChar2.Name = "numUpDown_DelayToChar2";
-			this.numUpDown_DelayToChar2.Size = new System.Drawing.Size(168, 20);
-			this.numUpDown_DelayToChar2.TabIndex = 53;
-			this.numUpDown_DelayToChar2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-			this.numUpDown_DelayToChar2.ThousandsSeparator = true;
-			// 
-			// comboBox_Char1_Part4
-			// 
-			this.comboBox_Char1_Part4.DisplayMember = "NoteName";
-			this.comboBox_Char1_Part4.FormattingEnabled = true;
-			this.comboBox_Char1_Part4.Location = new System.Drawing.Point(497, 38);
-			this.comboBox_Char1_Part4.Name = "comboBox_Char1_Part4";
-			this.comboBox_Char1_Part4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-			this.comboBox_Char1_Part4.Size = new System.Drawing.Size(56, 21);
-			this.comboBox_Char1_Part4.TabIndex = 52;
-			this.comboBox_Char1_Part4.ValueMember = "Frequency";
-			// 
-			// comboBox_Char1_Part3
-			// 
-			this.comboBox_Char1_Part3.DisplayMember = "NoteName";
-			this.comboBox_Char1_Part3.FormattingEnabled = true;
-			this.comboBox_Char1_Part3.Location = new System.Drawing.Point(364, 38);
-			this.comboBox_Char1_Part3.Name = "comboBox_Char1_Part3";
-			this.comboBox_Char1_Part3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-			this.comboBox_Char1_Part3.Size = new System.Drawing.Size(56, 21);
-			this.comboBox_Char1_Part3.TabIndex = 51;
-			this.comboBox_Char1_Part3.ValueMember = "Frequency";
-			// 
-			// comboBox_Char1_Part2
-			// 
-			this.comboBox_Char1_Part2.DisplayMember = "NoteName";
-			this.comboBox_Char1_Part2.FormattingEnabled = true;
-			this.comboBox_Char1_Part2.Location = new System.Drawing.Point(232, 38);
-			this.comboBox_Char1_Part2.Name = "comboBox_Char1_Part2";
-			this.comboBox_Char1_Part2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-			this.comboBox_Char1_Part2.Size = new System.Drawing.Size(56, 21);
-			this.comboBox_Char1_Part2.TabIndex = 50;
-			this.comboBox_Char1_Part2.ValueMember = "Frequency";
-			// 
-			// comboBox_Char1_Part1
-			// 
-			this.comboBox_Char1_Part1.DisplayMember = "NoteName";
-			this.comboBox_Char1_Part1.FormattingEnabled = true;
-			this.comboBox_Char1_Part1.Location = new System.Drawing.Point(87, 38);
-			this.comboBox_Char1_Part1.Name = "comboBox_Char1_Part1";
-			this.comboBox_Char1_Part1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-			this.comboBox_Char1_Part1.Size = new System.Drawing.Size(56, 21);
-			this.comboBox_Char1_Part1.TabIndex = 49;
-			this.comboBox_Char1_Part1.ValueMember = "Frequency";
-			// 
-			// lbl_delay
-			// 
-			this.lbl_delay.AutoSize = true;
-			this.lbl_delay.Location = new System.Drawing.Point(663, 8);
-			this.lbl_delay.Name = "lbl_delay";
-			this.lbl_delay.Size = new System.Drawing.Size(64, 13);
-			this.lbl_delay.TabIndex = 47;
-			this.lbl_delay.Text = "Delay in MS";
-			// 
-			// lbl_Part4
-			// 
-			this.lbl_Part4.AutoSize = true;
-			this.lbl_Part4.Location = new System.Drawing.Point(509, 8);
-			this.lbl_Part4.Name = "lbl_Part4";
-			this.lbl_Part4.Size = new System.Drawing.Size(44, 13);
-			this.lbl_Part4.TabIndex = 46;
-			this.lbl_Part4.Text = "4th Part";
-			// 
-			// lbl_Part3
-			// 
-			this.lbl_Part3.AutoSize = true;
-			this.lbl_Part3.Location = new System.Drawing.Point(376, 8);
-			this.lbl_Part3.Name = "lbl_Part3";
-			this.lbl_Part3.Size = new System.Drawing.Size(44, 13);
-			this.lbl_Part3.TabIndex = 45;
-			this.lbl_Part3.Text = "3rd Part";
-			// 
-			// lbl_Part2
-			// 
-			this.lbl_Part2.AutoSize = true;
-			this.lbl_Part2.Location = new System.Drawing.Point(241, 8);
-			this.lbl_Part2.Name = "lbl_Part2";
-			this.lbl_Part2.Size = new System.Drawing.Size(47, 13);
-			this.lbl_Part2.TabIndex = 44;
-			this.lbl_Part2.Text = "2nd Part";
-			// 
-			// lbl_Part1
-			// 
-			this.lbl_Part1.AutoSize = true;
-			this.lbl_Part1.Location = new System.Drawing.Point(100, 8);
-			this.lbl_Part1.Name = "lbl_Part1";
-			this.lbl_Part1.Size = new System.Drawing.Size(43, 13);
-			this.lbl_Part1.TabIndex = 43;
-			this.lbl_Part1.Text = "1st Part";
+			this.Identifier_Label.AutoSize = true;
+			this.Identifier_Label.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.Identifier_Label.Location = new System.Drawing.Point(98, 95);
+			this.Identifier_Label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+			this.Identifier_Label.Name = "Identifier_Label";
+			this.Identifier_Label.Size = new System.Drawing.Size(628, 27);
+			this.Identifier_Label.TabIndex = 41;
+			this.Identifier_Label.Text = "ID";
 			// 
 			// Character_Label
 			// 
 			this.Character_Label.AutoSize = true;
 			this.Character_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.Character_Label.Location = new System.Drawing.Point(13, 37);
+			this.Character_Label.Location = new System.Drawing.Point(3, 0);
 			this.Character_Label.Name = "Character_Label";
 			this.Character_Label.Size = new System.Drawing.Size(67, 24);
 			this.Character_Label.TabIndex = 64;
@@ -292,75 +63,90 @@
 			// label2
 			// 
 			this.label2.AutoSize = true;
-			this.label2.Location = new System.Drawing.Point(3, 89);
+			this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.label2.Location = new System.Drawing.Point(3, 95);
 			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(50, 13);
+			this.label2.Size = new System.Drawing.Size(90, 27);
 			this.label2.TabIndex = 65;
 			this.label2.Text = "Identifier:";
+			// 
+			// Morse_Label
+			// 
+			this.Morse_Label.AutoSize = true;
+			this.Morse_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.Morse_Label.Location = new System.Drawing.Point(3, 24);
+			this.Morse_Label.Name = "Morse_Label";
+			this.Morse_Label.Size = new System.Drawing.Size(84, 24);
+			this.Morse_Label.TabIndex = 66;
+			this.Morse_Label.Text = "MORSE";
+			// 
+			// SymbolPanel
+			// 
+			this.SymbolPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.SymbolPanel.Location = new System.Drawing.Point(99, 3);
+			this.SymbolPanel.Name = "SymbolPanel";
+			this.SymbolPanel.Size = new System.Drawing.Size(626, 89);
+			this.SymbolPanel.TabIndex = 67;
+			// 
+			// tableLayoutPanel1
+			// 
+			this.tableLayoutPanel1.ColumnCount = 2;
+			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+			this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 0);
+			this.tableLayoutPanel1.Controls.Add(this.label2, 0, 1);
+			this.tableLayoutPanel1.Controls.Add(this.SymbolPanel, 1, 0);
+			this.tableLayoutPanel1.Controls.Add(this.Identifier_Label, 1, 1);
+			this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 3);
+			this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+			this.tableLayoutPanel1.RowCount = 2;
+			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+			this.tableLayoutPanel1.Size = new System.Drawing.Size(728, 122);
+			this.tableLayoutPanel1.TabIndex = 68;
+			// 
+			// tableLayoutPanel2
+			// 
+			this.tableLayoutPanel2.AutoSize = true;
+			this.tableLayoutPanel2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+			this.tableLayoutPanel2.ColumnCount = 1;
+			this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+			this.tableLayoutPanel2.Controls.Add(this.Character_Label, 0, 0);
+			this.tableLayoutPanel2.Controls.Add(this.Morse_Label, 0, 1);
+			this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
+			this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+			this.tableLayoutPanel2.RowCount = 2;
+			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
+			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
+			this.tableLayoutPanel2.Size = new System.Drawing.Size(90, 48);
+			this.tableLayoutPanel2.TabIndex = 69;
 			// 
 			// MorseEntry
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.Controls.Add(this.label2);
-			this.Controls.Add(this.Character_Label);
-			this.Controls.Add(this.numUpDown_DelayChar1Part3);
-			this.Controls.Add(this.numUpDown_DelayChar1Part2);
-			this.Controls.Add(this.numUpDown_DelayChar1Part1);
-			this.Controls.Add(this.lbl_Delay3);
-			this.Controls.Add(this.lbl_Delay2);
-			this.Controls.Add(this.lbl_Delay1);
-			this.Controls.Add(this.lbl_Char1Part4);
-			this.Controls.Add(this.lbl_Char1Part3);
-			this.Controls.Add(this.lbl_Char1Part2);
-			this.Controls.Add(this.lbl_Char1Part1);
-			this.Controls.Add(this.numUpDown_DelayToChar2);
-			this.Controls.Add(this.comboBox_Char1_Part4);
-			this.Controls.Add(this.comboBox_Char1_Part3);
-			this.Controls.Add(this.comboBox_Char1_Part2);
-			this.Controls.Add(this.comboBox_Char1_Part1);
-			this.Controls.Add(this.lbl_delay);
-			this.Controls.Add(this.lbl_Part4);
-			this.Controls.Add(this.lbl_Part3);
-			this.Controls.Add(this.lbl_Part2);
-			this.Controls.Add(this.lbl_Part1);
-			this.Controls.Add(this.lbl_identifiyer);
+			this.AutoSize = true;
+			this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+			this.Controls.Add(this.tableLayoutPanel1);
 			this.Margin = new System.Windows.Forms.Padding(2);
 			this.Name = "MorseEntry";
-			this.Size = new System.Drawing.Size(745, 111);
-			this.Load += new System.EventHandler(this.MorseEntry_Load);
-			((System.ComponentModel.ISupportInitialize)(this.numUpDown_DelayChar1Part3)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.numUpDown_DelayChar1Part2)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.numUpDown_DelayChar1Part1)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.numUpDown_DelayToChar2)).EndInit();
+			this.Size = new System.Drawing.Size(734, 128);
+			this.Load += new System.EventHandler(this.OnLoad);
+			this.tableLayoutPanel1.ResumeLayout(false);
+			this.tableLayoutPanel1.PerformLayout();
+			this.tableLayoutPanel2.ResumeLayout(false);
+			this.tableLayoutPanel2.PerformLayout();
 			this.ResumeLayout(false);
-			this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Label lbl_identifiyer;
-        private System.Windows.Forms.NumericUpDown numUpDown_DelayChar1Part3;
-        private System.Windows.Forms.NumericUpDown numUpDown_DelayChar1Part2;
-        private System.Windows.Forms.NumericUpDown numUpDown_DelayChar1Part1;
-        private System.Windows.Forms.Label lbl_Delay3;
-        private System.Windows.Forms.Label lbl_Delay2;
-        private System.Windows.Forms.Label lbl_Delay1;
-        private System.Windows.Forms.Label lbl_Char1Part4;
-        private System.Windows.Forms.Label lbl_Char1Part3;
-        private System.Windows.Forms.Label lbl_Char1Part2;
-        private System.Windows.Forms.Label lbl_Char1Part1;
-        private System.Windows.Forms.NumericUpDown numUpDown_DelayToChar2;
-        private System.Windows.Forms.ComboBox comboBox_Char1_Part4;
-        private System.Windows.Forms.ComboBox comboBox_Char1_Part3;
-        private System.Windows.Forms.ComboBox comboBox_Char1_Part2;
-        private System.Windows.Forms.ComboBox comboBox_Char1_Part1;
-        private System.Windows.Forms.Label lbl_delay;
-        private System.Windows.Forms.Label lbl_Part4;
-        private System.Windows.Forms.Label lbl_Part3;
-        private System.Windows.Forms.Label lbl_Part2;
-        private System.Windows.Forms.Label lbl_Part1;
+        private System.Windows.Forms.Label Identifier_Label;
 		private System.Windows.Forms.Label Character_Label;
 		private System.Windows.Forms.Label label2;
+		private System.Windows.Forms.Label Morse_Label;
+		private System.Windows.Forms.FlowLayoutPanel SymbolPanel;
+		private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+		private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
 	}
 }

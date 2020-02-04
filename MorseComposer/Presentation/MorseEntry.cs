@@ -13,145 +13,24 @@ namespace MorseComposer.Presentation
             set
             {
                 guid = value;
-                lbl_identifiyer.Text = value.ToString();
+                Identifier_Label.Text = value.ToString();
             }
         }
 
         public Label Character
         {
-            get
-            {
-                return Character_Label;
-            }
+            get { return Character_Label; }
         }
 
-
-        #region Character_Labels
-
-        public Label Char1Part1
+        public Label Morse
         {
-            get
-            {
-                return lbl_Char1Part1;
-            }
+            get { return Morse_Label; }
         }
 
-        public Label Char1Part2
+        public FlowLayoutPanel Symbols
         {
-            get
-            {
-                return lbl_Char1Part2;
-            }
+            get { return this.SymbolPanel; }
         }
-
-        public Label Char1Part3
-        {
-            get
-            {
-                return lbl_Char1Part3;
-            }
-        }
-
-        public Label Char1Part4
-        {
-            get
-            {
-                return lbl_Char1Part4;
-            }
-        }
-
-        #endregion
-
-
-        #region Part1
-
-        public ComboBox Char1_Part1
-        {
-            get
-            {
-                return comboBox_Char1_Part1;
-            }
-        }
-
-
-        public NumericUpDown DelayChar1Part1
-        {
-            get
-            {
-                return numUpDown_DelayChar1Part1;
-            }
-        }
-
-        #endregion
-
-
-        #region Part2
-
-        public ComboBox Char1_Part2
-        {
-            get
-            {
-                return comboBox_Char1_Part2;
-            }
-        }
-
-
-        public NumericUpDown DelayChar1Part2
-        {
-            get
-            {
-                return numUpDown_DelayChar1Part2;
-            }
-        }
-
-        #endregion
-
-
-
-        #region Part3
-
-        public ComboBox Char1_Part3
-        {
-            get
-            {
-                return comboBox_Char1_Part3;
-            }
-        }
-
-
-        public NumericUpDown DelayChar1Part3
-        {
-            get
-            {
-                return numUpDown_DelayChar1Part3;
-            }
-        }
-
-        #endregion
-
-
-
-        #region Part4
-
-        public ComboBox Char1_Part4
-        {
-            get
-            {
-                return comboBox_Char1_Part4;
-            }
-        }
-
-
-        public NumericUpDown DelayChar1Part4
-        {
-            get
-            {
-                return numUpDown_DelayToChar2;
-            }
-        }
-
-        #endregion
-
 
 
         public MorseEntry()
@@ -160,40 +39,12 @@ namespace MorseComposer.Presentation
             Identifier = Guid.NewGuid();
         }
 
-        private void MorseEntry_Load(object sender, EventArgs e)
-        {
-            //Character.DataSource = Program.Data.Letters.Keys.ToList();
 
-            comboBox_Char1_Part1.DataSource = Program.Data.Frequencies.Keys.ToList();
-            comboBox_Char1_Part2.DataSource = Program.Data.Frequencies.Keys.ToList();
-            comboBox_Char1_Part3.DataSource = Program.Data.Frequencies.Keys.ToList();
-            comboBox_Char1_Part4.DataSource = Program.Data.Frequencies.Keys.ToList();
+        private void OnLoad(object sender, EventArgs e)
+        {
+
         }
 
 
-        private void comboBox_Char1_Part1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string key = comboBox_Char1_Part1.SelectedItem.ToString();
-            //comboBox_Char1_Part1.ValueMember = Frequencies[key].ToString();
-        }
-
-        private void comboBox_Char1_Part2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string key = comboBox_Char1_Part2.SelectedItem.ToString();
-            //comboBox_Char1_Part1.ValueMember = Frequencies[key].ToString();
-        }
-
-        private void comboBox_Char1_Part3_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string key = comboBox_Char1_Part3.SelectedItem.ToString();
-            //comboBox_Char1_Part1.ValueMember = Frequencies[key].ToString();
-
-        }
-
-        private void comboBox_Char1_Part4_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string key = comboBox_Char1_Part4.SelectedItem.ToString();
-            //comboBox_Char1_Part1.ValueMember = Frequencies[key].ToString();
-        }
     }
 }

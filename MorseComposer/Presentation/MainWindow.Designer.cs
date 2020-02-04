@@ -66,10 +66,10 @@
 			// 
 			this.flowLayoutPanel1.AutoScroll = true;
 			this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.flowLayoutPanel1.Location = new System.Drawing.Point(2, 66);
+			this.flowLayoutPanel1.Location = new System.Drawing.Point(2, 69);
 			this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
 			this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-			this.flowLayoutPanel1.Size = new System.Drawing.Size(878, 418);
+			this.flowLayoutPanel1.Size = new System.Drawing.Size(878, 415);
 			this.flowLayoutPanel1.TabIndex = 28;
 			// 
 			// butt_addChar
@@ -183,10 +183,11 @@
 			// MessageTranslate_TextBox
 			// 
 			this.MessageTranslate_TextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.MessageTranslate_TextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.MessageTranslate_TextBox.Location = new System.Drawing.Point(3, 32);
 			this.MessageTranslate_TextBox.Name = "MessageTranslate_TextBox";
 			this.MessageTranslate_TextBox.ReadOnly = true;
-			this.MessageTranslate_TextBox.Size = new System.Drawing.Size(789, 20);
+			this.MessageTranslate_TextBox.Size = new System.Drawing.Size(789, 26);
 			this.MessageTranslate_TextBox.TabIndex = 34;
 			// 
 			// SubmitButton
@@ -215,7 +216,7 @@
 			this.tableLayoutPanel2.RowCount = 2;
 			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
 			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
-			this.tableLayoutPanel2.Size = new System.Drawing.Size(876, 58);
+			this.tableLayoutPanel2.Size = new System.Drawing.Size(876, 61);
 			this.tableLayoutPanel2.TabIndex = 36;
 			// 
 			// helpToolStripMenuItem

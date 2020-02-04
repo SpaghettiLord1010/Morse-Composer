@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Linq;
 using System.Windows.Forms;
 
 namespace MorseComposer.Presentation
@@ -23,10 +22,10 @@ namespace MorseComposer.Presentation
 			AddEntry(); // Adds a default entry.
 
 			var entry = GetEntry(0);
-			Char1PartArray[0] = entry.Char1Part1;
-			Char1PartArray[1] = entry.Char1Part2;
-			Char1PartArray[2] = entry.Char1Part3;
-			Char1PartArray[3] = entry.Char1Part4;
+			//Char1PartArray[0] = entry.Char1Part1;
+			//Char1PartArray[1] = entry.Char1Part2;
+			//Char1PartArray[2] = entry.Char1Part3;
+			//Char1PartArray[3] = entry.Char1Part4;
 		}
 
 
@@ -56,10 +55,23 @@ namespace MorseComposer.Presentation
 			flowLayoutPanel1.Controls.Clear();
 			foreach (char character in Program.Data.Message)
 			{
-				MorseEntry entry = new MorseEntry();
-				entry.Character.Text = character.ToString();
+				if (Program.Data.Letters.TryGetValue(character, out string letter))
+				{
+					MorseEntry entry = new MorseEntry();
+					entry.Character.Text = character.ToString();
+					entry.Morse.Text = letter;
+					flowLayoutPanel1.Controls.Add(entry);
 
-				flowLayoutPanel1.Controls.Add(entry);
+
+					foreach (char symbol in letter)
+					{
+						MorseSymbolEntry symbolEntry = new MorseSymbolEntry();
+						symbolEntry.DelayChar1Part1.Value = 1;
+						symbolEntry.Char1Part1.Text = symbol.ToString();
+						entry.Symbols.Controls.Add(symbolEntry);
+					}
+
+				}
 			}
 		}
 
@@ -68,7 +80,7 @@ namespace MorseComposer.Presentation
 		{
 			//var entry = GetEntry(0);
 			//PopulateCharacters(entry.Char1);
-			DisplayPartTextChar1();
+			//DisplayPartTextChar1();
 		}
 
 
@@ -94,6 +106,7 @@ namespace MorseComposer.Presentation
 		}
 
 
+		[Obsolete]
 		public void PopulateCharacters(ComboBox comboBox)
 		{
 			if (comboBox.Text.ToString() == "A")
@@ -225,53 +238,52 @@ namespace MorseComposer.Presentation
 
 		public void PlayChar1(MorseEntry entry)
 		{
-			if (entry.Character.Text != string.Empty)
-			{
-				//Playing the first note - first part of the character
-				if (MorseCodeChar1.Substring(0, 1) == ".")
-				{
-					Console.Beep(Convert.ToInt32(entry.Char1_Part1.SelectedValue), 200);
-				}
-				else if (MorseCodeChar1.Substring(0, 1) == "-")
-				{
-					Console.Beep(Convert.ToInt32(entry.Char1_Part1.SelectedValue), 600);
-				}
-				System.Threading.Thread.Sleep((int)entry.DelayChar1Part1.Value);
+			//if (entry.Character.Text != string.Empty)
+			//{
+			//	//Playing the first note - first part of the character
+			//	if (MorseCodeChar1.Substring(0, 1) == ".")
+			//	{
+			//		Console.Beep(Convert.ToInt32(entry.Char1_Part1.SelectedValue), 200);
+			//	}
+			//	else if (MorseCodeChar1.Substring(0, 1) == "-")
+			//	{
+			//		Console.Beep(Convert.ToInt32(entry.Char1_Part1.SelectedValue), 600);
+			//	}
+			//	System.Threading.Thread.Sleep((int)entry.DelayChar1Part1.Value);
 
-				//Playing the second note - second part of the character
-				if (MorseCodeChar1.Substring(1, 1) == ".")
-				{
-					Console.Beep(Convert.ToInt32(entry.Char1_Part2.SelectedValue), 200);
-				}
-				else if (MorseCodeChar1.Substring(1, 1) == "-")
-				{
-					Console.Beep(Convert.ToInt32(entry.Char1_Part2.SelectedValue), 600);
-				}
-				System.Threading.Thread.Sleep((int)entry.DelayChar1Part2.Value);
+			//	//Playing the second note - second part of the character
+			//	if (MorseCodeChar1.Substring(1, 1) == ".")
+			//	{
+			//		Console.Beep(Convert.ToInt32(entry.Char1_Part2.SelectedValue), 200);
+			//	}
+			//	else if (MorseCodeChar1.Substring(1, 1) == "-")
+			//	{
+			//		Console.Beep(Convert.ToInt32(entry.Char1_Part2.SelectedValue), 600);
+			//	}
+			//	System.Threading.Thread.Sleep((int)entry.DelayChar1Part2.Value);
 
-				//Playing the third note - third part of the character
-				if (MorseCodeChar1.Substring(2, 1) == ".")
-				{
-					Console.Beep(Convert.ToInt32(entry.Char1_Part3.SelectedValue), 200);
-				}
-				else if (MorseCodeChar1.Substring(2, 1) == "-")
-				{
-					Console.Beep(Convert.ToInt32(entry.Char1_Part3.SelectedValue), 600);
-				}
-				System.Threading.Thread.Sleep((int)entry.DelayChar1Part3.Value);
+			//	//Playing the third note - third part of the character
+			//	if (MorseCodeChar1.Substring(2, 1) == ".")
+			//	{
+			//		Console.Beep(Convert.ToInt32(entry.Char1_Part3.SelectedValue), 200);
+			//	}
+			//	else if (MorseCodeChar1.Substring(2, 1) == "-")
+			//	{
+			//		Console.Beep(Convert.ToInt32(entry.Char1_Part3.SelectedValue), 600);
+			//	}
+			//	System.Threading.Thread.Sleep((int)entry.DelayChar1Part3.Value);
 
-				//Playing the fourth note - fourth part of the character
-				if (MorseCodeChar1.Substring(3, 1) == ".")
-				{
-					Console.Beep(Convert.ToInt32(entry.Char1_Part4.SelectedValue), 200);
-				}
-				else if (MorseCodeChar1.Substring(3, 1) == "-")
-				{
-					Console.Beep(Convert.ToInt32(entry.Char1_Part4.SelectedValue), 600);
-				}
-				System.Threading.Thread.Sleep((int)entry.DelayChar1Part4.Value);
-			}
-
+			//	//Playing the fourth note - fourth part of the character
+			//	if (MorseCodeChar1.Substring(3, 1) == ".")
+			//	{
+			//		Console.Beep(Convert.ToInt32(entry.Char1_Part4.SelectedValue), 200);
+			//	}
+			//	else if (MorseCodeChar1.Substring(3, 1) == "-")
+			//	{
+			//		Console.Beep(Convert.ToInt32(entry.Char1_Part4.SelectedValue), 600);
+			//	}
+			//	System.Threading.Thread.Sleep((int)entry.DelayChar1Part4.Value);
+			//}
 		}
 
 		private void butt_addChar_Click(object sender, EventArgs e)

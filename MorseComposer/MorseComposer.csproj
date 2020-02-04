@@ -100,6 +100,12 @@
     <Compile Include="Presentation\MorseEntry.Designer.cs">
       <DependentUpon>MorseEntry.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentation\MorseSymbolEntry.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Presentation\MorseSymbolEntry.Designer.cs">
+      <DependentUpon>MorseSymbolEntry.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Presentation\DataWindow.resx">
@@ -116,6 +122,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation\MorseEntry.resx">
       <DependentUpon>MorseEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\MorseSymbolEntry.resx">
+      <DependentUpon>MorseSymbolEntry.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
