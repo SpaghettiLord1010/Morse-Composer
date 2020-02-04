@@ -43,10 +43,10 @@
 			// 
 			this.Identifier_Label.AutoSize = true;
 			this.Identifier_Label.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.Identifier_Label.Location = new System.Drawing.Point(98, 95);
+			this.Identifier_Label.Location = new System.Drawing.Point(98, 54);
 			this.Identifier_Label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
 			this.Identifier_Label.Name = "Identifier_Label";
-			this.Identifier_Label.Size = new System.Drawing.Size(628, 27);
+			this.Identifier_Label.Size = new System.Drawing.Size(897, 68);
 			this.Identifier_Label.TabIndex = 41;
 			this.Identifier_Label.Text = "ID";
 			// 
@@ -64,9 +64,9 @@
 			// 
 			this.label2.AutoSize = true;
 			this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.label2.Location = new System.Drawing.Point(3, 95);
+			this.label2.Location = new System.Drawing.Point(3, 54);
 			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(90, 27);
+			this.label2.Size = new System.Drawing.Size(90, 68);
 			this.label2.TabIndex = 65;
 			this.label2.Text = "Identifier:";
 			// 
@@ -82,10 +82,12 @@
 			// 
 			// SymbolPanel
 			// 
+			this.SymbolPanel.AutoSize = true;
+			this.SymbolPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
 			this.SymbolPanel.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.SymbolPanel.Location = new System.Drawing.Point(99, 3);
 			this.SymbolPanel.Name = "SymbolPanel";
-			this.SymbolPanel.Size = new System.Drawing.Size(626, 89);
+			this.SymbolPanel.Size = new System.Drawing.Size(895, 48);
 			this.SymbolPanel.TabIndex = 67;
 			// 
 			// tableLayoutPanel1
@@ -102,7 +104,7 @@
 			this.tableLayoutPanel1.RowCount = 2;
 			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
 			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-			this.tableLayoutPanel1.Size = new System.Drawing.Size(728, 122);
+			this.tableLayoutPanel1.Size = new System.Drawing.Size(997, 122);
 			this.tableLayoutPanel1.TabIndex = 68;
 			// 
 			// tableLayoutPanel2
@@ -130,7 +132,7 @@
 			this.Controls.Add(this.tableLayoutPanel1);
 			this.Margin = new System.Windows.Forms.Padding(2);
 			this.Name = "MorseEntry";
-			this.Size = new System.Drawing.Size(734, 128);
+			this.Size = new System.Drawing.Size(1003, 128);
 			this.Load += new System.EventHandler(this.OnLoad);
 			this.tableLayoutPanel1.ResumeLayout(false);
 			this.tableLayoutPanel1.PerformLayout();

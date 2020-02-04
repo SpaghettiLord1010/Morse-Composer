@@ -22,11 +22,11 @@ namespace MorseComposer.Presentation
             }
         }
 
-        public Label Char1Part1
+        public GroupBox Char1Part1
         {
             get
             {
-                return lbl_Char1Part1;
+                return groupBox1;
             }
         }
 
