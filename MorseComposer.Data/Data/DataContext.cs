@@ -1,72 +1,114 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Diagnostics;
+using System.Linq;
+using System.Threading;
 
 namespace MorseComposer.Data
 {
-
-
-
-
-
-
-
-
-
-
-
-
     public class DataContext
 	{
-        public string Message { get; private set; }
+        public MessageData Message { get; private set; }
+
+
+        public DataContext()
+        {
+            Message = new MessageData();
+        }
+
+	}
+
+
+    [TypeConverter(typeof(ExpandableObjectConverter))]
+    public class MessageData
+    {
+        public string Text { get; private set; }
         public string Translated { get; private set; }
 
-        private const string LetterSpace = "   ";
-        private const string WordSpace = "       ";
+        public List<SymbolData> Symbols { get; private set; }
 
 
-        public bool Submit(string message)
+        public MessageData()
         {
-            Message = message;
-            return true;
+            Text = string.Empty;
+            Translated = string.Empty;
+            Symbols = new List<SymbolData>();
         }
+
+
+        public bool Submit(string text)
+        {
+            Text = text;
+            Symbols.Clear();
+
+            foreach (char character in text)
+            {
+                if (char.IsLetterOrDigit(character) || character == ' ')
+                {
+                    SymbolData symbol = new SymbolData();
+                    symbol.Character = character;
+                    Symbols.Add(symbol);
+                }
+                else
+                {
+                    Trace.WriteLine("The character \"" + character + "\" is not a letter, skipping.");
+                }
+            }
+
+            return Symbols.Count > 0;
+        }
+
+
 
 
         public bool Translate()
         {
             Translated = string.Empty;
 
-            if (string.IsNullOrWhiteSpace(Message))
+            if (string.IsNullOrWhiteSpace(Text))
             {
+                Trace.WriteLine("There is no text to translate.");
+                return false;
+            }
+            else if (Symbols.Count < 1)
+            {
+                Trace.WriteLine("There are no symbols to translate.");
                 return false;
             }
             else
             {
-                foreach (char character in Message)
+                foreach (var symbol in Symbols)
                 {
-                    if (character == ' ')
+                    if (symbol.Character == ' ')
                     {
-                        Translated += WordSpace;
+                        Translated += Lexicon.WordSpace;
                     }
                     else
                     {
-                        if (char.IsLetterOrDigit(character))
+                        if (char.IsLetterOrDigit(symbol.Character))
                         {
-                            bool found = Lexicon.Alphabet.TryGetValue(character, out string letter);
+                            bool found = Lexicon.Alphabet.TryGetValue(symbol.Character, out string code);
 
                             if (found)
                             {
-                                Translated += LetterSpace;
-                                Translated += letter;
+                                symbol.Code = code;
+
+
+                                if (!string.IsNullOrEmpty(Translated))
+                                {
+                                    Translated += Lexicon.LetterSpace;
+                                }
+                                Translated += code;
                             }
                             else
                             {
-                                throw new Exception("The character \"" + character + "\" could not be found.");
+                                throw new Exception("The character \"" + symbol.Character + "\" could not be found.");
                             }
                         }
                         else
                         {
-                            Trace.WriteLine("The character \"" + character + "\" is not a letter.");
+                            Trace.WriteLine("The character \"" + symbol.Character + "\" is not a letter.");
                         }
                     }
                 }
@@ -77,42 +119,67 @@ namespace MorseComposer.Data
 
 
 
-        public DataContext()
-		{
-            Message = string.Empty;
-            Translated = string.Empty;
-
-
-        }
-
-
-
-	}
-
-
-
-    public class MessageData
-    {
-        public List<SymbolData> Symbols { get; set; }
-
-        public MessageData()
+        public void Play()
         {
-            Symbols = new List<SymbolData>();
+            if (Symbols.Count > 0)
+            {
+                const int duration = 500;
+                foreach (var symbol in Symbols)
+                {
+                    Console.Beep(symbol.Tone, duration);
+                    Thread.Sleep(Convert.ToInt32(symbol.Delay));
+                    Trace.WriteLine(string.Format("BEEP! (Tone:{0}, Duration:{1}, Delay:{2})", symbol.Tone, duration, symbol.Delay));
+                }
+            }
+            else
+            {
+                Trace.WriteLine("There are no symbols to play tones.");
+            }
         }
+
+
+
 
     }
 
 
+    [TypeConverter(typeof(ExpandableObjectConverter))]
     public class SymbolData
     {
+        /// <summary>
+        /// The letter character for this symbol.
+        /// </summary>
+        public char Character { get; set; }
+
+        /// <summary>
+        /// The Morse code character for this symbol.
+        /// </summary>
+        public string Code { get; set; }
+
+        /// <summary>
+        /// The tone frequency for this symbol.
+        /// </summary>
         public int Tone { get; set; }
+
+        /// <summary>
+        /// The tone delay for this symbol.
+        /// </summary>
         public double Delay { get; set; }
+
 
         public SymbolData()
         {
-            Tone = 0;
+            Character = Lexicon.Alphabet.Keys.ToArray()[0]; ;
+            Code = string.Empty;
+            Tone = Lexicon.Frequencies.Values.ToArray()[0];
             Delay = 1.0;
         }
+
+        public override string ToString()
+        {
+            return Character.ToString();
+        }
+
     }
 
 

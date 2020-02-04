@@ -7,6 +7,17 @@ namespace MorseComposer.Data
         public static Dictionary<char, string> Alphabet { get; private set; }
         public static Dictionary<string, int> Frequencies { get; private set; }
 
+        /// <summary>
+        /// The space between each letter.
+        /// </summary>
+        public const string LetterSpace = "   ";
+
+        /// <summary>
+        /// The space between each word.
+        /// </summary>
+        public const string WordSpace = "       ";
+
+
         static Lexicon()
         {
             Alphabet = new Dictionary<char, string>();
