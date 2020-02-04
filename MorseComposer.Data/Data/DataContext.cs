@@ -1,57 +1,69 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 
 namespace MorseComposer.Data
 {
     public class DataContext
 	{
         public string Message { get; private set; }
-        public string MessageResult { get; private set; }
+        public string Translated { get; private set; }
 
         public Dictionary<char, string> Letters { get; private set; }
         public Dictionary<string, int> Frequencies { get; private set; }
 
 
-        public const string LetterSpace = "   ";
-        public const string WordSpace = "       ";
+        private const string LetterSpace = "   ";
+        private const string WordSpace = "       ";
 
 
-        public string Translate(string message)
+        public bool Submit(string message)
         {
-            if (string.IsNullOrWhiteSpace(message))
+            Message = message;
+            return true;
+        }
+
+
+        public bool Translate()
+        {
+            Translated = string.Empty;
+
+            if (string.IsNullOrWhiteSpace(Message))
             {
-                return string.Empty;
+                return false;
             }
             else
             {
-                message = message.ToUpper();
-
-                string result = string.Empty;
-
-                foreach (char character in message)
+                foreach (char character in Message)
                 {
-
                     if (character == ' ')
                     {
-                        result += WordSpace;
+                        Translated += WordSpace;
                     }
                     else
                     {
-                        bool found = Letters.TryGetValue(character, out string letter);
-
-                        if (found)
+                        if (char.IsLetter(character))
                         {
-                            result += LetterSpace;
-                            result += letter;
+                            bool found = Letters.TryGetValue(character, out string letter);
+
+                            if (found)
+                            {
+                                Translated += LetterSpace;
+                                Translated += letter;
+                            }
+                            else
+                            {
+                                throw new Exception("The character \"" + character + "\" could not be found.");
+                            }
                         }
                         else
                         {
-                            throw new Exception("The letter character \"" + character + "\" could not be found.");
+                            Trace.WriteLine("The character \"" + character + "\" is not a letter.");
                         }
                     }
                 }
 
-                return result;
+                return true;
             }
         }
 
@@ -59,6 +71,9 @@ namespace MorseComposer.Data
 
         public DataContext()
 		{
+            Message = string.Empty;
+            Translated = string.Empty;
+
             Letters = new Dictionary<char, string>();
             Letters.Add('A', ".-");
             Letters.Add('B', "-...");
@@ -86,8 +101,6 @@ namespace MorseComposer.Data
             Letters.Add('X', "-..-");
             Letters.Add('Y', "-.--");
             Letters.Add('Z', "--..");
-            //Letters.Add(' ', SpaceWord);
-
 
             Frequencies = new Dictionary<string, int>();
             Frequencies.Add("D1", 37);

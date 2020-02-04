@@ -15,7 +15,11 @@ namespace MorseComposer.Presentation
 		public MainWindow()
 		{
 			InitializeComponent();
+		}
 
+
+		private void OnLoad(object sender, EventArgs e)
+		{
 			AddEntry(); // Adds a default entry.
 
 			var entry = GetEntry(0);
@@ -23,24 +27,40 @@ namespace MorseComposer.Presentation
 			Char1PartArray[1] = entry.Char1Part2;
 			Char1PartArray[2] = entry.Char1Part3;
 			Char1PartArray[3] = entry.Char1Part4;
-
-		}
-
-
-		private void OnLoad(object sender, EventArgs e)
-		{
-			// TODO: Diese Codezeile lädt Daten in die Tabelle "frequencySheet1DataSet.Frequencies". Sie können sie bei Bedarf verschieben oder entfernen.
-			this.frequenciesTableAdapter.Fill(this.frequencySheet1DataSet.Frequencies);
 		}
 
 
 		private void SubmitButton_Click(object sender, EventArgs e)
 		{
-			MessageEntry_TextBox.Text.ToString();
+			flowLayoutPanel1.Controls.Clear();
+			MessageEntry_TextBox.Text = MessageEntry_TextBox.Text.ToUpper();
+
+			if (Program.Data.Submit(MessageEntry_TextBox.Text))
+			{
+				if (Program.Data.Translate())
+				{
+					MessageTranslate_TextBox.Text = Program.Data.Translated;
+					EditButton.Enabled = true;
+				}
+				else
+				{
+					MessageTranslate_TextBox.Text = string.Empty;
+					EditButton.Enabled = false;
+				}
+			}
+		}
 
 
-			var result = Program.Data.Translate(MessageEntry_TextBox.Text);
-			MessageTranslate_TextBox.Text = result;
+		private void EditButton_Click(object sender, EventArgs e)
+		{
+			flowLayoutPanel1.Controls.Clear();
+			foreach (char character in Program.Data.Message)
+			{
+				MorseEntry entry = new MorseEntry();
+				entry.Character.Text = character.ToString();
+
+				flowLayoutPanel1.Controls.Add(entry);
+			}
 		}
 
 
@@ -60,7 +80,17 @@ namespace MorseComposer.Presentation
 
 		private void DataWindowMenuItem_OnClick(object sender, EventArgs e)
 		{
-			new DataWindow().ShowDialog();
+			new DataWindow().Show();
+		}
+
+		private void helpToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			new HelpWindow().Show();
+		}
+
+		private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			Application.Exit();
 		}
 
 
@@ -195,7 +225,7 @@ namespace MorseComposer.Presentation
 
 		public void PlayChar1(MorseEntry entry)
 		{
-			if (entry.Char1.Text != string.Empty)
+			if (entry.Character.Text != string.Empty)
 			{
 				//Playing the first note - first part of the character
 				if (MorseCodeChar1.Substring(0, 1) == ".")

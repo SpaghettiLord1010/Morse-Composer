@@ -44,13 +44,13 @@
 			this.comboBox_Char1_Part3 = new System.Windows.Forms.ComboBox();
 			this.comboBox_Char1_Part2 = new System.Windows.Forms.ComboBox();
 			this.comboBox_Char1_Part1 = new System.Windows.Forms.ComboBox();
-			this.comboBox_Char1 = new System.Windows.Forms.ComboBox();
 			this.lbl_delay = new System.Windows.Forms.Label();
 			this.lbl_Part4 = new System.Windows.Forms.Label();
 			this.lbl_Part3 = new System.Windows.Forms.Label();
 			this.lbl_Part2 = new System.Windows.Forms.Label();
 			this.lbl_Part1 = new System.Windows.Forms.Label();
-			this.lbl_Char = new System.Windows.Forms.Label();
+			this.Character_Label = new System.Windows.Forms.Label();
+			this.label2 = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.numUpDown_DelayChar1Part3)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.numUpDown_DelayChar1Part2)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.numUpDown_DelayChar1Part1)).BeginInit();
@@ -60,12 +60,12 @@
 			// lbl_identifiyer
 			// 
 			this.lbl_identifiyer.AutoSize = true;
-			this.lbl_identifiyer.Location = new System.Drawing.Point(14, 86);
+			this.lbl_identifiyer.Location = new System.Drawing.Point(55, 89);
 			this.lbl_identifiyer.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
 			this.lbl_identifiyer.Name = "lbl_identifiyer";
-			this.lbl_identifiyer.Size = new System.Drawing.Size(35, 13);
+			this.lbl_identifiyer.Size = new System.Drawing.Size(18, 13);
 			this.lbl_identifiyer.TabIndex = 41;
-			this.lbl_identifiyer.Text = "label1";
+			this.lbl_identifiyer.Text = "ID";
 			// 
 			// numUpDown_DelayChar1Part3
 			// 
@@ -234,14 +234,6 @@
 			this.comboBox_Char1_Part1.TabIndex = 49;
 			this.comboBox_Char1_Part1.ValueMember = "Frequency";
 			// 
-			// comboBox_Char1
-			// 
-			this.comboBox_Char1.FormattingEnabled = true;
-			this.comboBox_Char1.Location = new System.Drawing.Point(13, 38);
-			this.comboBox_Char1.Name = "comboBox_Char1";
-			this.comboBox_Char1.Size = new System.Drawing.Size(59, 21);
-			this.comboBox_Char1.TabIndex = 48;
-			// 
 			// lbl_delay
 			// 
 			this.lbl_delay.AutoSize = true;
@@ -287,19 +279,31 @@
 			this.lbl_Part1.TabIndex = 43;
 			this.lbl_Part1.Text = "1st Part";
 			// 
-			// lbl_Char
+			// Character_Label
 			// 
-			this.lbl_Char.AutoSize = true;
-			this.lbl_Char.Location = new System.Drawing.Point(14, 8);
-			this.lbl_Char.Name = "lbl_Char";
-			this.lbl_Char.Size = new System.Drawing.Size(58, 13);
-			this.lbl_Char.TabIndex = 42;
-			this.lbl_Char.Text = "Characters";
+			this.Character_Label.AutoSize = true;
+			this.Character_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.Character_Label.Location = new System.Drawing.Point(13, 37);
+			this.Character_Label.Name = "Character_Label";
+			this.Character_Label.Size = new System.Drawing.Size(67, 24);
+			this.Character_Label.TabIndex = 64;
+			this.Character_Label.Text = "CHAR";
+			// 
+			// label2
+			// 
+			this.label2.AutoSize = true;
+			this.label2.Location = new System.Drawing.Point(3, 89);
+			this.label2.Name = "label2";
+			this.label2.Size = new System.Drawing.Size(50, 13);
+			this.label2.TabIndex = 65;
+			this.label2.Text = "Identifier:";
 			// 
 			// MorseEntry
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.Controls.Add(this.label2);
+			this.Controls.Add(this.Character_Label);
 			this.Controls.Add(this.numUpDown_DelayChar1Part3);
 			this.Controls.Add(this.numUpDown_DelayChar1Part2);
 			this.Controls.Add(this.numUpDown_DelayChar1Part1);
@@ -315,13 +319,11 @@
 			this.Controls.Add(this.comboBox_Char1_Part3);
 			this.Controls.Add(this.comboBox_Char1_Part2);
 			this.Controls.Add(this.comboBox_Char1_Part1);
-			this.Controls.Add(this.comboBox_Char1);
 			this.Controls.Add(this.lbl_delay);
 			this.Controls.Add(this.lbl_Part4);
 			this.Controls.Add(this.lbl_Part3);
 			this.Controls.Add(this.lbl_Part2);
 			this.Controls.Add(this.lbl_Part1);
-			this.Controls.Add(this.lbl_Char);
 			this.Controls.Add(this.lbl_identifiyer);
 			this.Margin = new System.Windows.Forms.Padding(2);
 			this.Name = "MorseEntry";
@@ -353,12 +355,12 @@
         private System.Windows.Forms.ComboBox comboBox_Char1_Part3;
         private System.Windows.Forms.ComboBox comboBox_Char1_Part2;
         private System.Windows.Forms.ComboBox comboBox_Char1_Part1;
-        private System.Windows.Forms.ComboBox comboBox_Char1;
         private System.Windows.Forms.Label lbl_delay;
         private System.Windows.Forms.Label lbl_Part4;
         private System.Windows.Forms.Label lbl_Part3;
         private System.Windows.Forms.Label lbl_Part2;
         private System.Windows.Forms.Label lbl_Part1;
-        private System.Windows.Forms.Label lbl_Char;
+		private System.Windows.Forms.Label Character_Label;
+		private System.Windows.Forms.Label label2;
 	}
 }

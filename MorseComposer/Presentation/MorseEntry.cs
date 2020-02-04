@@ -17,11 +17,11 @@ namespace MorseComposer.Presentation
             }
         }
 
-        public ComboBox Char1
+        public Label Character
         {
             get
             {
-                return comboBox_Char1;
+                return Character_Label;
             }
         }
 
@@ -162,7 +162,7 @@ namespace MorseComposer.Presentation
 
         private void MorseEntry_Load(object sender, EventArgs e)
         {
-            Char1.DataSource = Program.Data.Letters.Keys.ToList();
+            //Character.DataSource = Program.Data.Letters.Keys.ToList();
 
             comboBox_Char1_Part1.DataSource = Program.Data.Frequencies.Keys.ToList();
             comboBox_Char1_Part2.DataSource = Program.Data.Frequencies.Keys.ToList();

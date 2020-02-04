@@ -71,6 +71,12 @@
     <Compile Include="Presentation\DataWindow.Designer.cs">
       <DependentUpon>DataWindow.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentation\HelpWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\HelpWindow.Designer.cs">
+      <DependentUpon>HelpWindow.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentation\MainAbout.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,6 +104,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Presentation\DataWindow.resx">
       <DependentUpon>DataWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\HelpWindow.resx">
+      <DependentUpon>HelpWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation\MainAbout.resx">
       <DependentUpon>MainAbout.cs</DependentUpon>
@@ -146,6 +155,7 @@
     <Content Include="FrequencySheet1.mdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="MorseCode.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MorseComposer.Data\MorseComposer.Data.csproj">
