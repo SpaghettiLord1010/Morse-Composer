@@ -39,11 +39,6 @@ namespace MorseComposer.Presentation
         }
 
 
-        private void OnLoad(object sender, EventArgs e)
-        {
-
-        }
-
 
     }
 }

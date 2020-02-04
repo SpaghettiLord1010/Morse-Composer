@@ -44,6 +44,8 @@
   <ItemGroup>
     <Compile Include="Data\DataContext.cs" />
     <Compile Include="Data\Lexicon.cs" />
+    <Compile Include="Data\MessageData.cs" />
+    <Compile Include="Data\SymbolData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

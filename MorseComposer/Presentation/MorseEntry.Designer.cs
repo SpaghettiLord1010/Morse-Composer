@@ -133,7 +133,6 @@
 			this.Margin = new System.Windows.Forms.Padding(2);
 			this.Name = "MorseEntry";
 			this.Size = new System.Drawing.Size(1003, 128);
-			this.Load += new System.EventHandler(this.OnLoad);
 			this.tableLayoutPanel1.ResumeLayout(false);
 			this.tableLayoutPanel1.PerformLayout();
 			this.tableLayoutPanel2.ResumeLayout(false);

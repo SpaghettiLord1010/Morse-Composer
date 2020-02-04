@@ -12,12 +12,12 @@ namespace MorseComposer.Presentation
             get { return comboBox_Char1_Part1; }
         }
 
-        public NumericUpDown DelayChar1Part1
+        public NumericUpDown Delay
         {
             get { return numUpDown_DelayChar1Part1; }
         }
 
-        public GroupBox Char1Part1
+        public GroupBox CodeCharacter
         {
             get { return groupBox1; }
         }

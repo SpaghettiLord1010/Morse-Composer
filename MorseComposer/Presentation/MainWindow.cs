@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Windows.Forms;
-using MorseComposer.Data;
 
 namespace MorseComposer.Presentation
 {
@@ -37,22 +36,20 @@ namespace MorseComposer.Presentation
 		private void EditButton_Click(object sender, EventArgs e)
 		{
 			flowLayoutPanel1.Controls.Clear();
-			foreach (char character in Program.Data.Message.Text)
-			{
-				if (Lexicon.Alphabet.TryGetValue(character, out string letter))
-				{
-					MorseEntry entry = new MorseEntry();
-					entry.Character.Text = character.ToString();
-					entry.Morse.Text = letter;
-					flowLayoutPanel1.Controls.Add(entry);
 
-					foreach (char symbol in letter)
-					{
-						MorseSymbolEntry symbolEntry = new MorseSymbolEntry();
-						symbolEntry.DelayChar1Part1.Value = 1;
-						symbolEntry.Char1Part1.Text = symbol.ToString();
-						entry.Symbols.Controls.Add(symbolEntry);
-					}
+			foreach (var symbol in Program.Data.Message.Symbols)
+			{
+				MorseEntry entry = new MorseEntry();
+				entry.Character.Text = symbol.Character.ToString();
+				entry.Morse.Text = symbol.Code;
+				flowLayoutPanel1.Controls.Add(entry);
+
+				foreach (char codeCharacter in symbol.Code)
+				{
+					MorseSymbolEntry symbolEntry = new MorseSymbolEntry();
+					symbolEntry.Delay.Value = 1;
+					symbolEntry.CodeCharacter.Text = codeCharacter.ToString();
+					entry.Symbols.Controls.Add(symbolEntry);
 				}
 			}
 		}
