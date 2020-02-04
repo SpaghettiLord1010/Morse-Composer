@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using MorseComposer.Data;
 
 namespace MorseComposer.Presentation
 {
@@ -12,6 +13,7 @@ namespace MorseComposer.Presentation
 		}
 
 
+		[Obsolete]
 		private void OnLoad(object sender, EventArgs e)
 		{
 		}
@@ -43,13 +45,12 @@ namespace MorseComposer.Presentation
 			flowLayoutPanel1.Controls.Clear();
 			foreach (char character in Program.Data.Message)
 			{
-				if (Program.Data.Letters.TryGetValue(character, out string letter))
+				if (Lexicon.Alphabet.TryGetValue(character, out string letter))
 				{
 					MorseEntry entry = new MorseEntry();
 					entry.Character.Text = character.ToString();
 					entry.Morse.Text = letter;
 					flowLayoutPanel1.Controls.Add(entry);
-
 
 					foreach (char symbol in letter)
 					{
@@ -58,7 +59,6 @@ namespace MorseComposer.Presentation
 						symbolEntry.Char1Part1.Text = symbol.ToString();
 						entry.Symbols.Controls.Add(symbolEntry);
 					}
-
 				}
 			}
 		}
@@ -94,6 +94,7 @@ namespace MorseComposer.Presentation
 		}
 
 
+		[Obsolete]
 		public void PlayChar1(MorseEntry entry)
 		{
 			//if (entry.Character.Text != string.Empty)

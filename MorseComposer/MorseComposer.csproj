@@ -89,11 +89,6 @@
     <Compile Include="Presentation\MainWindow.Designer.cs">
       <DependentUpon>MainWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrequencySheet1DataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>FrequencySheet1DataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Presentation\MorseEntry.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -136,17 +131,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="FrequencySheet1DataSet.xsc">
-      <DependentUpon>FrequencySheet1DataSet.xsd</DependentUpon>
-    </None>
-    <None Include="FrequencySheet1DataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>FrequencySheet1DataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="FrequencySheet1DataSet.xss">
-      <DependentUpon>FrequencySheet1DataSet.xsd</DependentUpon>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -161,9 +145,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="FrequencySheet1.mdb">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <None Include="MorseCode.png" />
   </ItemGroup>
   <ItemGroup>
