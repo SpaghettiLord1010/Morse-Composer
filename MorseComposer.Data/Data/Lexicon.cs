@@ -6,6 +6,7 @@ namespace MorseComposer.Data
     {
         public static Dictionary<char, string> Alphabet { get; private set; }
         public static Dictionary<string, int> Frequencies { get; private set; }
+        public static Dictionary<string, int> MIDIFrequencies { get; private set; }
 
         /// <summary>
         /// The space between each letter.
@@ -142,17 +143,93 @@ namespace MorseComposer.Data
             Frequencies.Add("A7#", 3729);
             Frequencies.Add("B7", 3951);
             Frequencies.Add("C8", 4186);
-            Frequencies.Add("C8#", 4435);
-            Frequencies.Add("D8", 4699);
-            Frequencies.Add("D8#", 4978);
-            Frequencies.Add("E8", 5274);
-            Frequencies.Add("F8", 5588);
-            Frequencies.Add("F8#", 5920);
-            Frequencies.Add("G8", 6272);
-            Frequencies.Add("G8#", 6645);
-            Frequencies.Add("A8", 7040);
-            Frequencies.Add("A8#", 7459);
-            Frequencies.Add("B8", 7902);
+
+
+
+            MIDIFrequencies = new Dictionary<string, int>();
+            Frequencies.Add("D1", 26);
+            Frequencies.Add("D1#", 27);
+            Frequencies.Add("E1", 28);
+            Frequencies.Add("F1", 29);
+            Frequencies.Add("F1#", 30);
+            Frequencies.Add("G1", 31);
+            Frequencies.Add("G1#", 32);
+            Frequencies.Add("A1", 33);
+            Frequencies.Add("A1#", 34);
+            Frequencies.Add("B1", 35);
+            Frequencies.Add("C2", 36);
+            Frequencies.Add("C2#", 37);
+            Frequencies.Add("D2", 38);
+            Frequencies.Add("D2#", 39);
+            Frequencies.Add("E2", 40);
+            Frequencies.Add("F2", 41);
+            Frequencies.Add("F2#", 42);
+            Frequencies.Add("G2", 43);
+            Frequencies.Add("G2#", 44);
+            Frequencies.Add("A2", 45);
+            Frequencies.Add("A2#", 46);
+            Frequencies.Add("B2", 47);
+            Frequencies.Add("C3", 48);
+            Frequencies.Add("C3#", 49);
+            Frequencies.Add("D3", 50);
+            Frequencies.Add("D3#", 51);
+            Frequencies.Add("E3", 52);
+            Frequencies.Add("F3", 53);
+            Frequencies.Add("F3#", 54);
+            Frequencies.Add("G3", 55);
+            Frequencies.Add("G3#", 56);
+            Frequencies.Add("A3", 57);
+            Frequencies.Add("A3#", 58);
+            Frequencies.Add("B3", 59);
+            Frequencies.Add("C4", 60);
+            Frequencies.Add("C4#", 61);
+            Frequencies.Add("D4", 62);
+            Frequencies.Add("D4#", 63);
+            Frequencies.Add("E4", 64);
+            Frequencies.Add("F4", 65);
+            Frequencies.Add("F4#", 66);
+            Frequencies.Add("G4", 67);
+            Frequencies.Add("G4#", 68);
+            Frequencies.Add("A4", 69);
+            Frequencies.Add("A4#", 70);
+            Frequencies.Add("B4", 71);
+            Frequencies.Add("C5", 72);
+            Frequencies.Add("C5#", 73);
+            Frequencies.Add("D5", 74);
+            Frequencies.Add("D5#", 75);
+            Frequencies.Add("E5", 76);
+            Frequencies.Add("F5", 77);
+            Frequencies.Add("F5#", 78);
+            Frequencies.Add("G5", 79);
+            Frequencies.Add("G5#", 80);
+            Frequencies.Add("A5", 81);
+            Frequencies.Add("A5#", 82);
+            Frequencies.Add("B5", 83);
+            Frequencies.Add("C6", 84);
+            Frequencies.Add("C6#", 85);
+            Frequencies.Add("D6", 86);
+            Frequencies.Add("D6#", 87);
+            Frequencies.Add("E6", 88);
+            Frequencies.Add("F6", 89);
+            Frequencies.Add("F6#", 90);
+            Frequencies.Add("G6", 91);
+            Frequencies.Add("G6#", 92);
+            Frequencies.Add("A6", 93);
+            Frequencies.Add("A6#", 94);
+            Frequencies.Add("B6", 95);
+            Frequencies.Add("C7", 96);
+            Frequencies.Add("C7#", 97);
+            Frequencies.Add("D7", 98);
+            Frequencies.Add("D7#", 99);
+            Frequencies.Add("E7", 100);
+            Frequencies.Add("F7", 101);
+            Frequencies.Add("F7#", 102);
+            Frequencies.Add("G7", 103);
+            Frequencies.Add("G7#", 104);
+            Frequencies.Add("A7", 105);
+            Frequencies.Add("A7#", 106);
+            Frequencies.Add("B7", 107);
+            Frequencies.Add("C8", 108);
         }
 
 
