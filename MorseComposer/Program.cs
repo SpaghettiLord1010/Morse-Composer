@@ -1,13 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using MorseComposer.Data;
+using MorseComposer.Presentation;
 
 namespace MorseComposer
 {
     static class Program
     {
+        public static DataContext Data { get; private set; }
+
+
         /// <summary>
         /// Der Haupteinstiegspunkt für die Anwendung.
         /// </summary>
@@ -16,7 +18,11 @@ namespace MorseComposer
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+
+            Data = new DataContext();
+            Application.Run(new MainWindow());
         }
+
+
     }
 }
