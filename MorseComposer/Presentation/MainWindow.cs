@@ -82,5 +82,13 @@ namespace MorseComposer.Presentation
 		}
 
 
+		private void ExecuteButton_OnClick(object sender, EventArgs e)
+		{
+			Program.Data.PIP("install", "midiutil");
+			Program.Data.Python("TextToMid.py", null);
+		}
+
+
+
 	}
 }
