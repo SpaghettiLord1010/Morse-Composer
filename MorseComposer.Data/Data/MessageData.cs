@@ -142,7 +142,7 @@ namespace MorseComposer.Data
                 }
                 //setting the frequency
                 tone = character.Tone;
-                finishedText = finishedText += Environment.NewLine + tone + Environment.NewLine + time + Environment.NewLine + duration;
+                finishedText = finishedText + Environment.NewLine + tone + Environment.NewLine + time + Environment.NewLine + duration;
 
 
                 
