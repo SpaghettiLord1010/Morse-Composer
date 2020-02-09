@@ -31,7 +31,7 @@ namespace MorseComposer.Data
         {
             Character = Lexicon.Alphabet.Keys.ToArray()[0]; ;
             Code = string.Empty;
-            Tone = Lexicon.Frequencies.Values.ToArray()[0];
+            Tone = Lexicon.Frequencies.Values.ToArray()[0].Frequency;
             Delay = 1.0;
         }
 
