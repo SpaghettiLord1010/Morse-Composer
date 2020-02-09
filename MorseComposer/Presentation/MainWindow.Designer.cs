@@ -37,7 +37,7 @@
 			this.MessageEntry_TextBox = new System.Windows.Forms.TextBox();
 			this.EditButton = new System.Windows.Forms.Button();
 			this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-			this.MainMenuStrip = new System.Windows.Forms.MenuStrip();
+			this.MainMenu = new System.Windows.Forms.MenuStrip();
 			this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.showDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -47,7 +47,7 @@
 			this.tableLayoutPanel1.SuspendLayout();
 			this.tableLayoutPanel2.SuspendLayout();
 			this.flowLayoutPanel2.SuspendLayout();
-			this.MainMenuStrip.SuspendLayout();
+			this.MainMenu.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// button_play
@@ -158,13 +158,13 @@
 			// 
 			// MainMenuStrip
 			// 
-			this.MainMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+			this.MainMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem});
-			this.MainMenuStrip.Location = new System.Drawing.Point(0, 0);
-			this.MainMenuStrip.Name = "MainMenuStrip";
-			this.MainMenuStrip.Size = new System.Drawing.Size(882, 24);
-			this.MainMenuStrip.TabIndex = 32;
-			this.MainMenuStrip.Text = "menuStrip1";
+			this.MainMenu.Location = new System.Drawing.Point(0, 0);
+			this.MainMenu.Name = "MainMenuStrip";
+			this.MainMenu.Size = new System.Drawing.Size(882, 24);
+			this.MainMenu.TabIndex = 32;
+			this.MainMenu.Text = "menuStrip1";
 			// 
 			// fileToolStripMenuItem
 			// 
@@ -217,7 +217,7 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(882, 550);
 			this.Controls.Add(this.tableLayoutPanel1);
-			this.Controls.Add(this.MainMenuStrip);
+			this.Controls.Add(this.MainMenu);
 			this.Margin = new System.Windows.Forms.Padding(2);
 			this.Name = "MainWindow";
 			this.Text = "Morse Composer";
@@ -226,8 +226,8 @@
 			this.tableLayoutPanel2.ResumeLayout(false);
 			this.tableLayoutPanel2.PerformLayout();
 			this.flowLayoutPanel2.ResumeLayout(false);
-			this.MainMenuStrip.ResumeLayout(false);
-			this.MainMenuStrip.PerformLayout();
+			this.MainMenu.ResumeLayout(false);
+			this.MainMenu.PerformLayout();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -238,7 +238,7 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
 		private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
 		private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
-		private System.Windows.Forms.MenuStrip MainMenuStrip;
+		private System.Windows.Forms.MenuStrip MainMenu;
 		private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem showDataToolStripMenuItem;
