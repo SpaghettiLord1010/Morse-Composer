@@ -29,6 +29,9 @@ namespace MorseComposer.Presentation
             comboBox_Char1_Part1.DataSource = Lexicon.Frequencies.Keys.ToList();
         }
 
+        private void comboBox_Char1_Part1_SelectedIndexChanged(object sender, System.EventArgs e)
+        {
 
-	}
+        }
+    }
 }

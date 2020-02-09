@@ -23,6 +23,5 @@ namespace MorseComposer
             Application.Run(new MainWindow());
         }
 
-
     }
 }

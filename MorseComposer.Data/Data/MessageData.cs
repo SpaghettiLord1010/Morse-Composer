@@ -122,6 +122,34 @@ namespace MorseComposer.Data
             }
         }
 
+        public string GetCharText()
+        {
+            int tone = 0;
+            int time = 0;
+            int duration = 0;
+            string finishedText = "";
+
+            foreach (SymbolData character in Symbols)
+            {
+                //setting the lenght
+                if(character.ToString() == ".")
+                {
+                    duration = 1;
+                }
+                else if (character.ToString() == "-")
+                {
+                    duration = 2;
+                }
+                //setting the frequency
+                tone = character.Tone;
+                finishedText = finishedText += Environment.NewLine + tone + Environment.NewLine + time + Environment.NewLine + duration;
+
+
+                
+            }
+            return finishedText;
+        }
+
 
     }
 }
