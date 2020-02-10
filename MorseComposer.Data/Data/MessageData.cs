@@ -123,34 +123,39 @@ namespace MorseComposer.Data
 			}
 		}
 
-
-		// TODO: The `SymbolData.Character` is NOT a dot or dash. Its the alphabetical letter.
-		// The comparison below is incorrect.
-		public string GetCharText()
+		// TODO: With these new data requirements I need to rethink the `SymbolData` class.
+		//       The below function at least creates a well formed file for conversion in the python script.
+		// TODO: The tone variable is incorrect for MIDI, dont use frequency for the tone here.
+		// TODO: The distinction between "time", "duration", and "delay" needs to be more clearly defined.
+		public string[] GetLines()
 		{
-			const int time = 0; // TODO: This is an unused variable!
-			int duration = 0;
-			string text = string.Empty;
+			List<string> lines = new List<string>();
 
-			foreach (var symbol in Symbols)
+			foreach (SymbolData symbol in Symbols)
 			{
-				// setting the length
-				if (symbol.Character == '.')
+				foreach (char character in symbol.Code)
 				{
-					duration = 1;
+					lines.Add(symbol.Tone.ToString());
+					lines.Add(symbol.Delay.ToString());
+
+					if (character == '.')
+					{
+						lines.Add("1");
+					}
+					else if (character == '-')
+					{
+						lines.Add("2");
+					}
+					else
+					{ // Probably is a blank space
+						lines.Add("0");
+					}
+
+					lines.Add(string.Empty);
 				}
-				else if (symbol.Character == '-')
-				{
-					duration = 2;
-				}
-				else
-				{
-					// unhandled code branch
-				}
-				// setting the frequency
-				text += Environment.NewLine + symbol.Tone + Environment.NewLine + time + Environment.NewLine + duration;
 			}
-			return text;
+
+			return lines.ToArray();
 		}
 
 

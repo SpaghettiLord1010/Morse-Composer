@@ -20,6 +20,10 @@ namespace MorseComposer.Data
         {
 			string input = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "MorseComposer", "temp.txt");
 
+			// TODO: Finish up the input file writer.
+			string[] lines = Message.GetLines();
+			File.WriteAllLines(input, lines);
+
 			if (File.Exists(input))
 			{
 				Python.PIP("install", "midiutil");
