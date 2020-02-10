@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Diagnostics;
+using System.IO;
 using System.Windows.Forms;
 
 namespace MorseComposer.Presentation
@@ -84,8 +86,7 @@ namespace MorseComposer.Presentation
 
 		private void ExecuteButton_OnClick(object sender, EventArgs e)
 		{
-			Python.PIP("install", "midiutil");
-			Python.Execute("TextToMid.py", null);
+			Program.Data.Output();
 		}
 
 
