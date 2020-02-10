@@ -6,7 +6,6 @@ namespace MorseComposer.Data
     {
         public static Dictionary<char, string> Alphabet { get; private set; }
         public static Dictionary<string, AudioValue> Frequencies { get; private set; }
-        public static Dictionary<string, int> MIDIFrequencies { get; private set; }
 
         /// <summary>
         /// The space between each letter.
