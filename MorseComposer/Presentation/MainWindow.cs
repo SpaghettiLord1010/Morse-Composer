@@ -5,10 +5,17 @@ using System.Windows.Forms;
 
 namespace MorseComposer.Presentation
 {
+
+    public class OutputVars
+    {
+        public static string[] MorseSymbolData;
+    }
+
 	public partial class MainWindow : Form
 	{
 
-		public MainWindow()
+
+        public MainWindow()
 		{
 			InitializeComponent();
 		}
@@ -89,6 +96,9 @@ namespace MorseComposer.Presentation
 			Program.Data.Output();
 		}
 
+        private void MainWindow_Load(object sender, EventArgs e)
+        {
 
-	}
+        }
+    }
 }
