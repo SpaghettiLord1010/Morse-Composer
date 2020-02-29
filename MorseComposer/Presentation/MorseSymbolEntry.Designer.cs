@@ -6,10 +6,6 @@ using System.Diagnostics;
 
 namespace MorseComposer.Presentation
 {
-    public class Number
-    {
-        public static int MyNumber = 0;
-    }
 
 	partial class MorseSymbolEntry
 	{
@@ -39,9 +35,6 @@ namespace MorseComposer.Presentation
 		/// </summary>
 		private void InitializeComponent()
 		{
-            int MyObjectNumber = Number.MyNumber;
-            Number.MyNumber = Number.MyNumber + 1;
-
             this.numUpDown_DelayChar1Part1 = new System.Windows.Forms.NumericUpDown();
             this.comboBox_Char1_Part1 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();

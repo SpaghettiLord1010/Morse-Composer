@@ -31,7 +31,7 @@ namespace MorseComposer.Presentation
 
         private void comboBox_Char1_Part1_SelectedIndexChanged(object sender, System.EventArgs e)
         {
-            //OutputVars.MorseSymbolData[1] = { }; //Here I need the MyObjectNumber which should be different for each instance.
+            
         }
 
         private void groupBox1_Enter(object sender, System.EventArgs e)
