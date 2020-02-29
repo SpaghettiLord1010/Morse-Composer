@@ -6,11 +6,6 @@ using System.Windows.Forms;
 namespace MorseComposer.Presentation
 {
 
-    public class OutputVars
-    {
-        public static string[] MorseSymbolData;
-    }
-
 	public partial class MainWindow : Form
 	{
 
