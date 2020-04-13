@@ -96,5 +96,38 @@ namespace MorseComposer.Presentation
         {
 
         }
+
+        private void helpToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void helpToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            Form MyHelpWindow = new HelpWindow();
+            MyHelpWindow.Show();
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form MyAboutWindow = new MainAbout();
+            MyAboutWindow.Show();
+        }
+
+        private void dataWindowToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form MyDataWindow = new DataWindow();
+            MyDataWindow.Show();
+        }
     }
 }
