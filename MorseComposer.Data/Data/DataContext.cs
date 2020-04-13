@@ -84,6 +84,7 @@ namespace MorseComposer.Data
             // TODO: Finish up the input file writer.
             Directory.GetParent(input).Create();
 
+            inputText = inputText + "0" + Environment.NewLine + "0" + Environment.NewLine + "0" + Environment.NewLine + Environment.NewLine;
             File.WriteAllText(input, inputText);
             //MessageBox.Show("Hi, input is: " + input + Environment.NewLine + "Lines is: ");
             //MessageBox.Show(inputText);
