@@ -32,8 +32,7 @@ namespace MorseComposer.Data
 			{
 				if (char.IsLetterOrDigit(character) || character == ' ')
 				{
-					SymbolData symbol = new SymbolData();
-					symbol.Character = character;
+					SymbolData symbol = new SymbolData(character);
 					Symbols.Add(symbol);
 				}
 				else
@@ -110,9 +109,16 @@ namespace MorseComposer.Data
 				const int duration = 500;
 				foreach (var symbol in Symbols)
 				{
-					Console.Beep(symbol.Tone, duration);
-					Thread.Sleep(Convert.ToInt32(symbol.Delay));
-					Trace.WriteLine(string.Format("BEEP! (Tone:{0}, Duration:{1}, Delay:{2})", symbol.Tone, duration, symbol.Delay));
+					if (symbol.Character != ' ') {
+
+						for (var i = 0; i < symbol.Code.Length; i++) {
+							Console.Beep(symbol.Tone[i], duration);
+							Thread.Sleep(Convert.ToInt32(symbol.Delay[i]));
+							Trace.WriteLine(string.Format("BEEP! (Tone:{0}, Duration:{1}, Delay:{2})", symbol.Tone[i], duration, symbol.Delay[i]));
+						}
+					} else {
+						Thread.Sleep(duration);
+					}
 				}
 				return true;
 			}

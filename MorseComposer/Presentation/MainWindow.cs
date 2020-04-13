@@ -48,11 +48,11 @@ namespace MorseComposer.Presentation
 				entry.Morse.Text = symbol.Code;
 				flowLayoutPanel1.Controls.Add(entry);
 
-				foreach (char codeCharacter in symbol.Code)
+				for (int i = 0; i < symbol.Code.Length; i++)
 				{
-					MorseSymbolEntry symbolEntry = new MorseSymbolEntry();
+					MorseSymbolEntry symbolEntry = new MorseSymbolEntry(symbol, i);
 					symbolEntry.Delay.Value = 1;
-					symbolEntry.CodeCharacter.Text = codeCharacter.ToString();
+					symbolEntry.CodeCharacter.Text = symbol.Code[i].ToString();
 					entry.Symbols.Controls.Add(symbolEntry);
 				}
 			}

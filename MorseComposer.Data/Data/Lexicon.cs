@@ -58,6 +58,8 @@ namespace MorseComposer.Data
             Alphabet.Add('8', "---..");
             Alphabet.Add('9', "----.");
 
+            Alphabet.Add(' ', " ");
+
             Frequencies = new Dictionary<string, AudioValue>();
             Frequencies.Add("D1", new AudioValue(37, 26));
             Frequencies.Add("D1#", new AudioValue(39, 27));

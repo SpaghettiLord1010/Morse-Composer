@@ -74,6 +74,10 @@ namespace MorseComposer.Data
                 inputText = inputText + tone + Environment.NewLine + time + Environment.NewLine + duration + Environment.NewLine + Environment.NewLine;
             }
 
+
+
+            Directory.GetParent(input).Create();
+
             //Replace lines with inputText when the problems are solved - then we should be golden -Spaghetti
             File.WriteAllLines(input, lines);
             MessageBox.Show("Hi, input is: " + input + Environment.NewLine + "Lines is: ");
