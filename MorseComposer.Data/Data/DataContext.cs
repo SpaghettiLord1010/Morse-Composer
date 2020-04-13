@@ -100,7 +100,7 @@ namespace MorseComposer.Data
                 var pythonFile = directory + "\\TextToMid.py";               
                 File.WriteAllText(directory + "\\temp.bat", "pip install midiutil" + Environment.NewLine + "python " + pythonFile);
                 System.Diagnostics.Process.Start(directory + "\\temp.bat");
-                MessageBox.Show("Geht", "python " + pythonFile);
+                MessageBox.Show("Please Wait A Second!", "Please Wait A Second!");
                 File.Delete(directory + "\\temp.bat");
             }
 
