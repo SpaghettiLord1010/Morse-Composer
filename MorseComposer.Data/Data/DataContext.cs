@@ -74,8 +74,9 @@ namespace MorseComposer.Data
                             time = time + (int)morseDelay;
                         }
                     }
+                    inputText = inputText + morseTone + Environment.NewLine + time + Environment.NewLine + duration + Environment.NewLine + Environment.NewLine;
                 }
-                inputText = inputText + symbol.Tone + Environment.NewLine + time + Environment.NewLine + duration + Environment.NewLine + Environment.NewLine;
+                
             }
 
 			string input = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "MorseComposer", "temp.txt");
@@ -84,8 +85,8 @@ namespace MorseComposer.Data
             Directory.GetParent(input).Create();
 
             File.WriteAllText(input, inputText);
-            MessageBox.Show("Hi, input is: " + input + Environment.NewLine + "Lines is: ");
-            MessageBox.Show(inputText);
+            //MessageBox.Show("Hi, input is: " + input + Environment.NewLine + "Lines is: ");
+            //MessageBox.Show(inputText);
 
 			if (File.Exists(input))
 			{
