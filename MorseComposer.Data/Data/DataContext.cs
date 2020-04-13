@@ -97,10 +97,11 @@ namespace MorseComposer.Data
                 }
 
                 var directory = System.IO.Path.GetDirectoryName(Application.ExecutablePath);
-                var pythonFile = directory + "/TextToMid.py";
+                var pythonFile = directory + "\\TextToMid.py";
 
                 System.Diagnostics.Process.Start("CMD.exe", "pip install midiutil");
-                System.Diagnostics.Process.Start("CMD.exe", "python " + "\"" + pythonFile + "\"");
+                System.Diagnostics.Process.Start("CMD.exe", "python " +  pythonFile);
+                MessageBox.Show("python " + pythonFile, "python " + pythonFile);
                 
 
 			}
