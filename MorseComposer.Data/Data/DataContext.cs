@@ -91,30 +91,20 @@ namespace MorseComposer.Data
 
 			if (File.Exists(input))
 			{
-				Python.PIP("install", "midiutil");
-				if (Python.Execute("TextToMid.py", null))
-				{
-					string output = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "MorseComposer", "MorseComposerOutput.mid");
-					if (File.Exists(output))
-					{
-						Console.WriteLine(string.Format("Created {0} successfully.", output));
-						FileInfo file = new FileInfo(output);
-						Process.Start(file.Directory.FullName); // open the directory
-					}
-					else
-					{
-						Console.WriteLine(string.Format("An output file could not be created at {0}", output));
-					}
-				}
-				else
-				{
-					Console.WriteLine(string.Format("The python script 'TextToMid.py' has failed.", input));
-				}
+                if (File.Exists(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "MorseComposer", "MorseComposerOutput.mid")))
+                {
+                    File.Delete(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "MorseComposer", "MorseComposerOutput.mid"));
+                }
+
+                var directory = System.IO.Path.GetDirectoryName(Application.ExecutablePath);
+                var pythonFile = directory + "/TextToMid.py";
+
+                System.Diagnostics.Process.Start("CMD.exe", "pip install midiutil");
+                System.Diagnostics.Process.Start("CMD.exe", "python " + "\"" + pythonFile + "\"");
+                
+
 			}
-			else
-			{
-				Console.WriteLine(string.Format("The file {0} must exist.", input));
-			}
+
 		}
 
 

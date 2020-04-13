@@ -61,8 +61,8 @@ namespace MorseComposer.Presentation
 
 		private void PlayButton_OnClick(object sender, EventArgs e)
 		{
-			Program.Data.Message.Play();
-		}
+            System.Diagnostics.Process.Start(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "MorseComposer", "MorseComposerOutput.mid"));
+        }
 
 
 		private void AboutWindowMenuItem_OnClick(object sender, EventArgs e)
@@ -89,6 +89,7 @@ namespace MorseComposer.Presentation
 		private void ExecuteButton_OnClick(object sender, EventArgs e)
 		{
 			Program.Data.Output();
+            button_play.Enabled = true;
 		}
 
         private void MainWindow_Load(object sender, EventArgs e)
