@@ -20,68 +20,72 @@ namespace MorseComposer.Data
 
         public void Output()
         {
-			string input = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "MorseComposer", "temp.txt");
-
-            // TODO: Finish up the input file writer.
-            string[] lines = Message.GetLines();
-
             bool firstRun = true;
             int tone = 0;
             int time = 0;
             int duration = 0;
             string inputText = "";
 
-            foreach(char line in Message.Translated.Replace("   ", " "))
+            foreach (var symbol in Message.Symbols)
             {
-                //MessageBox.Show(line.ToString()); -Spaghtti - Was for debugging
-                if(line.ToString() == ".")
+                for(int morseID = 0; morseID < symbol.Code.Length; morseID++)
                 {
-                    duration = 1;
-                    if (firstRun)
+                    var morseChar = symbol.Code[morseID];
+                    var morseTone = symbol.Tone[morseID];
+                    var morseDelay = symbol.Delay[morseID];
+                    if (!firstRun)
                     {
-                        time = 0;
-                        firstRun = false;
+                        if (morseChar == '.')
+                        {
+                            duration = 1;
+                            time = time + (int)morseDelay;
+                            
+                        }
+                        else if(morseChar == '-')
+                        {
+                            duration = 2;
+                            time = time + (int)morseDelay;
+
+                        }
+                        else if(morseChar == ' ')
+                        {
+                            time = time + (int)morseDelay;
+                        }
+
                     }
                     else
                     {
-                        //just in the meanwhile - get delay from MorseSymbolEntry Delay NumUpDown instead of 1 - Spaghetti
-                        time = time + 1;
-                    }
-                }
-                else if(line.ToString() == "-")
-                {
-                    duration = 2;
-                    if (firstRun)
-                    {
                         time = 0;
                         firstRun = false;
-                    }
-                    else
-                    {
-                        //just in the meanwhile - get delay from MorseSymbolEntry Delay NumUpDown instead of 1 - Spaghetti
-                        time = time + 1;
+                        if (morseChar == '.')
+                        {
+                            duration = 1;
+                            time = time + (int)morseDelay;
+
+                        }
+                        else if (morseChar == '-')
+                        {
+                            duration = 2;
+                            time = time + (int)morseDelay;
+
+                        }
+                        else if (morseChar == ' ')
+                        {
+                            time = time + (int)morseDelay;
+                        }
                     }
                 }
-                else if (line.ToString() == " ")
-                {
-                    //just in the meanwhile - next need to get the delay from the current MorseSymbolEntry Delay NumUpDown and add it to it! -Spaghetti
-                    time = time + 1;
-                }
-
-                //tone = midi value from the frequencies dictionary - Spaghetti - Important!
-
-                //combining the inputText with itself and adding the tone, time and duration in the right order - should be exactly what we need to save when we find out how to adress the MorseSymbolEntry stuff - Spaghetti - Yeah, almost done, I think this will work!
-                inputText = inputText + tone + Environment.NewLine + time + Environment.NewLine + duration + Environment.NewLine + Environment.NewLine;
+                inputText = inputText + symbol.Tone + Environment.NewLine + time + Environment.NewLine + duration + Environment.NewLine + Environment.NewLine;
             }
 
+			string input = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "MorseComposer", "temp.txt");
 
-
+            // TODO: Finish up the input file writer.
             Directory.GetParent(input).Create();
 
-            //Replace lines with inputText when the problems are solved - then we should be golden -Spaghetti
-            File.WriteAllLines(input, lines);
+            File.WriteAllText(input, inputText);
             MessageBox.Show("Hi, input is: " + input + Environment.NewLine + "Lines is: ");
-            MessageBox.Show(String.Join("",lines));
+            MessageBox.Show(inputText);
 
 			if (File.Exists(input))
 			{

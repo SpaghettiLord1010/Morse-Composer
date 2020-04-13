@@ -50,10 +50,10 @@
             // 
             // button_play
             // 
-            this.button_play.Location = new System.Drawing.Point(156, 6);
-            this.button_play.Margin = new System.Windows.Forms.Padding(6);
+            this.button_play.Location = new System.Drawing.Point(128, 5);
+            this.button_play.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.button_play.Name = "button_play";
-            this.button_play.Size = new System.Drawing.Size(167, 52);
+            this.button_play.Size = new System.Drawing.Size(137, 43);
             this.button_play.TabIndex = 20;
             this.button_play.Text = "PLAY";
             this.button_play.UseVisualStyleBackColor = true;
@@ -63,10 +63,9 @@
             // 
             this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(4, 124);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 103);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1609, 811);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1317, 677);
             this.flowLayoutPanel1.TabIndex = 28;
             // 
             // tableLayoutPanel1
@@ -78,13 +77,13 @@
             this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel2, 0, 2);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(6);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1617, 1015);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1323, 846);
             this.tableLayoutPanel1.TabIndex = 31;
             // 
             // tableLayoutPanel2
@@ -98,21 +97,21 @@
             this.tableLayoutPanel2.Controls.Add(this.MessageEntry_TextBox, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.EditButton, 1, 1);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(6, 6);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(6);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(5, 5);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1605, 108);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1313, 90);
             this.tableLayoutPanel2.TabIndex = 36;
             // 
             // SubmitButton
             // 
-            this.SubmitButton.Location = new System.Drawing.Point(1461, 6);
-            this.SubmitButton.Margin = new System.Windows.Forms.Padding(6);
+            this.SubmitButton.Location = new System.Drawing.Point(1195, 5);
+            this.SubmitButton.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.SubmitButton.Name = "SubmitButton";
-            this.SubmitButton.Size = new System.Drawing.Size(138, 42);
+            this.SubmitButton.Size = new System.Drawing.Size(113, 35);
             this.SubmitButton.TabIndex = 35;
             this.SubmitButton.Text = "Submit";
             this.SubmitButton.UseVisualStyleBackColor = true;
@@ -122,30 +121,30 @@
             // 
             this.MessageTranslate_TextBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MessageTranslate_TextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MessageTranslate_TextBox.Location = new System.Drawing.Point(6, 60);
-            this.MessageTranslate_TextBox.Margin = new System.Windows.Forms.Padding(6);
+            this.MessageTranslate_TextBox.Location = new System.Drawing.Point(5, 50);
+            this.MessageTranslate_TextBox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.MessageTranslate_TextBox.Name = "MessageTranslate_TextBox";
             this.MessageTranslate_TextBox.ReadOnly = true;
-            this.MessageTranslate_TextBox.Size = new System.Drawing.Size(1443, 39);
+            this.MessageTranslate_TextBox.Size = new System.Drawing.Size(1180, 35);
             this.MessageTranslate_TextBox.TabIndex = 34;
             // 
             // MessageEntry_TextBox
             // 
             this.MessageEntry_TextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MessageEntry_TextBox.Location = new System.Drawing.Point(6, 6);
-            this.MessageEntry_TextBox.Margin = new System.Windows.Forms.Padding(6);
+            this.MessageEntry_TextBox.Location = new System.Drawing.Point(5, 5);
+            this.MessageEntry_TextBox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.MessageEntry_TextBox.Name = "MessageEntry_TextBox";
-            this.MessageEntry_TextBox.Size = new System.Drawing.Size(1443, 29);
+            this.MessageEntry_TextBox.Size = new System.Drawing.Size(1180, 26);
             this.MessageEntry_TextBox.TabIndex = 33;
             this.MessageEntry_TextBox.Text = "Hello World!";
             // 
             // EditButton
             // 
             this.EditButton.Enabled = false;
-            this.EditButton.Location = new System.Drawing.Point(1461, 60);
-            this.EditButton.Margin = new System.Windows.Forms.Padding(6);
+            this.EditButton.Location = new System.Drawing.Point(1195, 50);
+            this.EditButton.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.EditButton.Name = "EditButton";
-            this.EditButton.Size = new System.Drawing.Size(138, 42);
+            this.EditButton.Size = new System.Drawing.Size(113, 35);
             this.EditButton.TabIndex = 36;
             this.EditButton.Text = "Edit";
             this.EditButton.UseVisualStyleBackColor = true;
@@ -157,18 +156,18 @@
             this.flowLayoutPanel2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.flowLayoutPanel2.Controls.Add(this.button1);
             this.flowLayoutPanel2.Controls.Add(this.button_play);
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(6, 945);
-            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(6);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(5, 788);
+            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(329, 64);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(270, 53);
             this.flowLayoutPanel2.TabIndex = 29;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(6, 6);
-            this.button1.Margin = new System.Windows.Forms.Padding(6);
+            this.button1.Location = new System.Drawing.Point(5, 5);
+            this.button1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(138, 42);
+            this.button1.Size = new System.Drawing.Size(113, 35);
             this.button1.TabIndex = 21;
             this.button1.Text = "Execute";
             this.button1.UseVisualStyleBackColor = true;
@@ -209,11 +208,10 @@
             // 
             // MainWindow
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1617, 1015);
+            this.ClientSize = new System.Drawing.Size(1323, 846);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MainWindow";
             this.Text = "Morse Composer";
             this.Load += new System.EventHandler(this.MainWindow_Load);
