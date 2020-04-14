@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using System.IO;
+using System.Reflection;
 using System.Windows.Forms;
 using System.Runtime;
 
@@ -96,8 +97,8 @@ namespace MorseComposer.Data
                     File.Delete(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "MorseComposer", "MorseComposerOutput.mid"));
                 }
 
-                var directory = System.IO.Path.GetDirectoryName(Application.ExecutablePath);
-                var pythonFile = directory + "\\TextToMid.py";               
+                var directory = Path.GetDirectoryName(Application.ExecutablePath);
+                var pythonFile = directory + "\\TextToMid.py";
                 File.WriteAllText(directory + "\\temp.bat", "pip install midiutil" + Environment.NewLine + "python " + pythonFile);
                 System.Diagnostics.Process.Start(directory + "\\temp.bat");
                 MessageBox.Show("Please Wait A Second!", "Please Wait A Second!");
