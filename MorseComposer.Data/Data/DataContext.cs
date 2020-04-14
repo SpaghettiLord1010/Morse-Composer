@@ -44,7 +44,7 @@ namespace MorseComposer.Data
                         }
                         else if(morseChar == '-')
                         {
-                            duration = 2;
+                            duration = 3;
                             time = time + (int)morseDelay;
 
                         }
@@ -66,7 +66,7 @@ namespace MorseComposer.Data
                         }
                         else if (morseChar == '-')
                         {
-                            duration = 2;
+                            duration = 3;
                             time = time + (int)morseDelay;
 
                         }
