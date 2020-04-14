@@ -4,6 +4,7 @@ using System.IO;
 using System.Reflection;
 using System.Windows.Forms;
 using System.Runtime;
+using System.Threading;
 
 
 namespace MorseComposer.Data
@@ -101,7 +102,8 @@ namespace MorseComposer.Data
                 var pythonFile = directory + "\\TextToMid.py";
                 File.WriteAllText(directory + "\\temp.bat", "pip install midiutil" + Environment.NewLine + "python " + pythonFile);
                 System.Diagnostics.Process.Start(directory + "\\temp.bat");
-                MessageBox.Show("Please Wait A Second!", "Please Wait A Second!");
+                MessageBox.Show("Please Wait A Second - The program is making sure that your midiutil-library is installed and the midi file is being created." + Environment.NewLine + Environment.NewLine + "It will take only a few seconds, so please be patient!", "Please Wait A Second!",MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Thread.Sleep(2000);
                 File.Delete(directory + "\\temp.bat");
             }
 
