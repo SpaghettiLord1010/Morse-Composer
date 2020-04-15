@@ -33,4 +33,11 @@ But why put a delay of 2 you ask? Mid files store notes with a starting time, a 
 
 ### Ideas for the future:
 
-[] Set the delay automatically to work with the standard.
+- [ ] Set the delay automatically to work with the standard.
+
+### Thanks and other info
+
+Thanks to @Scrivener07 and @DaGammla for helping me with this project!
+I decided to put it in the Unilicense so that everyone can use and build upon this project, it helped me to learn some new stuff too and I think it should continue to help others to learn.
+
+I hope you like it, make some cool music!
