@@ -42,6 +42,7 @@
             this.helpToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataWindowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.checkBox_AutoDelay = new System.Windows.Forms.CheckBox();
             this.showDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.AboutMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -56,10 +57,10 @@
             // button_play
             // 
             this.button_play.Enabled = false;
-            this.button_play.Location = new System.Drawing.Point(128, 5);
-            this.button_play.Margin = new System.Windows.Forms.Padding(5);
+            this.button_play.Location = new System.Drawing.Point(124, 5);
+            this.button_play.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button_play.Name = "button_play";
-            this.button_play.Size = new System.Drawing.Size(137, 43);
+            this.button_play.Size = new System.Drawing.Size(136, 43);
             this.button_play.TabIndex = 20;
             this.button_play.Text = "PLAY";
             this.button_play.UseVisualStyleBackColor = true;
@@ -71,8 +72,9 @@
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 103);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1317, 793);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1317, 794);
             this.flowLayoutPanel1.TabIndex = 28;
+            this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
             // tableLayoutPanel1
             // 
@@ -83,7 +85,7 @@
             this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel2, 0, 2);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(5);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
@@ -103,21 +105,21 @@
             this.tableLayoutPanel2.Controls.Add(this.MessageEntry_TextBox, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.EditButton, 1, 1);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(5, 5);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(5);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(4, 5);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1313, 90);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1315, 90);
             this.tableLayoutPanel2.TabIndex = 36;
             // 
             // SubmitButton
             // 
-            this.SubmitButton.Location = new System.Drawing.Point(1195, 5);
-            this.SubmitButton.Margin = new System.Windows.Forms.Padding(5);
+            this.SubmitButton.Location = new System.Drawing.Point(1199, 5);
+            this.SubmitButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.SubmitButton.Name = "SubmitButton";
-            this.SubmitButton.Size = new System.Drawing.Size(113, 35);
+            this.SubmitButton.Size = new System.Drawing.Size(112, 35);
             this.SubmitButton.TabIndex = 35;
             this.SubmitButton.Text = "Submit";
             this.SubmitButton.UseVisualStyleBackColor = true;
@@ -127,30 +129,30 @@
             // 
             this.MessageTranslate_TextBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MessageTranslate_TextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MessageTranslate_TextBox.Location = new System.Drawing.Point(5, 50);
-            this.MessageTranslate_TextBox.Margin = new System.Windows.Forms.Padding(5);
+            this.MessageTranslate_TextBox.Location = new System.Drawing.Point(4, 50);
+            this.MessageTranslate_TextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MessageTranslate_TextBox.Name = "MessageTranslate_TextBox";
             this.MessageTranslate_TextBox.ReadOnly = true;
-            this.MessageTranslate_TextBox.Size = new System.Drawing.Size(1180, 35);
+            this.MessageTranslate_TextBox.Size = new System.Drawing.Size(1187, 35);
             this.MessageTranslate_TextBox.TabIndex = 34;
             // 
             // MessageEntry_TextBox
             // 
             this.MessageEntry_TextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MessageEntry_TextBox.Location = new System.Drawing.Point(5, 5);
-            this.MessageEntry_TextBox.Margin = new System.Windows.Forms.Padding(5);
+            this.MessageEntry_TextBox.Location = new System.Drawing.Point(4, 5);
+            this.MessageEntry_TextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MessageEntry_TextBox.Name = "MessageEntry_TextBox";
-            this.MessageEntry_TextBox.Size = new System.Drawing.Size(1180, 26);
+            this.MessageEntry_TextBox.Size = new System.Drawing.Size(1187, 26);
             this.MessageEntry_TextBox.TabIndex = 33;
-            this.MessageEntry_TextBox.Text = "Hello World!";
+            this.MessageEntry_TextBox.Text = "Hallelujah It Works!";
             // 
             // EditButton
             // 
             this.EditButton.Enabled = false;
-            this.EditButton.Location = new System.Drawing.Point(1195, 50);
-            this.EditButton.Margin = new System.Windows.Forms.Padding(5);
+            this.EditButton.Location = new System.Drawing.Point(1199, 50);
+            this.EditButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.EditButton.Name = "EditButton";
-            this.EditButton.Size = new System.Drawing.Size(113, 35);
+            this.EditButton.Size = new System.Drawing.Size(112, 35);
             this.EditButton.TabIndex = 36;
             this.EditButton.Text = "Edit";
             this.EditButton.UseVisualStyleBackColor = true;
@@ -162,18 +164,19 @@
             this.flowLayoutPanel2.Controls.Add(this.button1);
             this.flowLayoutPanel2.Controls.Add(this.button_play);
             this.flowLayoutPanel2.Controls.Add(this.menuStrip2);
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(5, 904);
-            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(5);
+            this.flowLayoutPanel2.Controls.Add(this.checkBox_AutoDelay);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(4, 905);
+            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(1308, 53);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(1308, 52);
             this.flowLayoutPanel2.TabIndex = 29;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(5, 5);
-            this.button1.Margin = new System.Windows.Forms.Padding(5);
+            this.button1.Location = new System.Drawing.Point(4, 5);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(113, 35);
+            this.button1.Size = new System.Drawing.Size(112, 35);
             this.button1.TabIndex = 21;
             this.button1.Text = "Execute";
             this.button1.UseVisualStyleBackColor = true;
@@ -186,7 +189,7 @@
             this.helpToolStripMenuItem2,
             this.aboutToolStripMenuItem,
             this.dataWindowToolStripMenuItem});
-            this.menuStrip2.Location = new System.Drawing.Point(270, 0);
+            this.menuStrip2.Location = new System.Drawing.Point(264, 0);
             this.menuStrip2.Name = "menuStrip2";
             this.menuStrip2.Size = new System.Drawing.Size(270, 33);
             this.menuStrip2.TabIndex = 22;
@@ -212,6 +215,17 @@
             this.dataWindowToolStripMenuItem.Size = new System.Drawing.Size(127, 29);
             this.dataWindowToolStripMenuItem.Text = "DataWindow";
             this.dataWindowToolStripMenuItem.Click += new System.EventHandler(this.dataWindowToolStripMenuItem_Click);
+            // 
+            // checkBox_AutoDelay
+            // 
+            this.checkBox_AutoDelay.AutoSize = true;
+            this.checkBox_AutoDelay.Location = new System.Drawing.Point(537, 3);
+            this.checkBox_AutoDelay.Name = "checkBox_AutoDelay";
+            this.checkBox_AutoDelay.Size = new System.Drawing.Size(527, 24);
+            this.checkBox_AutoDelay.TabIndex = 23;
+            this.checkBox_AutoDelay.Text = "Automatically assign the correct delays to fit the inernational standard.";
+            this.checkBox_AutoDelay.UseVisualStyleBackColor = true;
+            this.checkBox_AutoDelay.CheckedChanged += new System.EventHandler(this.checkBox_AutoDelay_CheckedChanged);
             // 
             // showDataToolStripMenuItem
             // 
@@ -289,6 +303,7 @@
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem dataWindowToolStripMenuItem;
+        private System.Windows.Forms.CheckBox checkBox_AutoDelay;
     }
 }
 

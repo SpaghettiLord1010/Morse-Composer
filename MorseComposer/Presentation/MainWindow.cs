@@ -2,13 +2,17 @@
 using System.Diagnostics;
 using System.IO;
 using System.Windows.Forms;
+using MorseComposer.Data;
+using MorseComposer.Presentation;
 
 namespace MorseComposer.Presentation
 {
 
 	public partial class MainWindow : Form
 	{
-
+        //Need this bool in DataContext.cs, I can do the rest!
+        public static bool AutoDelay;
+        
 
         public MainWindow()
 		{
@@ -25,7 +29,11 @@ namespace MorseComposer.Presentation
 			{
 				if (Program.Data.Message.Translate())
 				{
-					MessageTranslate_TextBox.Text = Program.Data.Message.Translated;
+                    string t = Program.Data.Message.Translated;
+                    t = t.Replace("!", "");
+                    t = t.Replace("_", "");
+                    MessageTranslate_TextBox.Text = t;
+                    
 					EditButton.Enabled = true;
 				}
 				else
@@ -43,18 +51,29 @@ namespace MorseComposer.Presentation
 
 			foreach (var symbol in Program.Data.Message.Symbols)
 			{
-				MorseEntry entry = new MorseEntry();
-				entry.Character.Text = symbol.Character.ToString();
-				entry.Morse.Text = symbol.Code;
-				flowLayoutPanel1.Controls.Add(entry);
+                if (symbol.Code.ToString() != "_")
+                {
+                    MorseEntry entry = new MorseEntry();
+				    entry.Character.Text = symbol.Character.ToString();
+                    string t = symbol.Code;
+                    t = t.Replace("!", "");
+                    t = t.Replace("_", "");
+                    entry.Morse.Text = t;
+				    flowLayoutPanel1.Controls.Add(entry);
 
-				for (int i = 0; i < symbol.Code.Length; i++)
-				{
-					MorseSymbolEntry symbolEntry = new MorseSymbolEntry(symbol, i);
-					symbolEntry.Delay.Value = 1;
-					symbolEntry.CodeCharacter.Text = symbol.Code[i].ToString();
-					entry.Symbols.Controls.Add(symbolEntry);
-				}
+
+                    for (int i = 0; i < symbol.Code.Length-1; i++)
+				    {
+					    MorseSymbolEntry symbolEntry = new MorseSymbolEntry(symbol, i);
+					    symbolEntry.Delay.Value = 1;
+                        t = symbol.Code[i].ToString();
+                        t = t.Replace("!", "");
+                        t = t.Replace("_", "");
+                        symbolEntry.CodeCharacter.Text = t;
+					    entry.Symbols.Controls.Add(symbolEntry);
+				    }
+                }
+
 			}
 		}
 
@@ -128,6 +147,19 @@ namespace MorseComposer.Presentation
         {
             Form MyDataWindow = new DataWindow();
             MyDataWindow.Show();
+        }
+
+        private void checkBox_AutoDelay_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox_AutoDelay.Checked)
+                MorseComposer.Data.DataContext.MyCheckBoxValue = true;
+            else
+                MorseComposer.Data.DataContext.MyCheckBoxValue = false;
+        }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
